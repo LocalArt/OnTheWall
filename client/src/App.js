@@ -1,17 +1,44 @@
-import React, { Component } from "react";
-import { VendorName } from "./VendorName";
-import { About } from "./About";
+// import React, { Component } from "react";
+// import { VendorName } from "./VendorName";
+// import { About } from "./About";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <VendorName />
-        {/* <About title="About Artist" /> */}
-        <About title="About Venue" />
-      </div>
-    );
-  }
-}
+// class App extends Component {
+//   render() {
+//     return (
+//       <div className="App">
+//         <VendorName />
+//         {/* <About title="About Artist" /> */}
+//         <About title="About Venue" />
+//       </div>
+//     );
+//   }
+// }
+
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Artist from "./pages/artist";
+import Home from "./pages/home";
+import Venue from "./pages/venue";
+import VenueSignUp from "./pages/venueSignup";
+import ArtistSignUp from "./pages/artistSignup";
+
+const App = () => (
+  <Router>
+    <div>
+      {/* <Nav /> */}
+      <Switch>
+        {/* <Route exact path="/" component={Books} /> */}
+        <Route exact path="/home" component={Home} />
+        <Route path="/artist" component={Artist} />
+        <Route exact path="/artistsignup" component={ArtistSignUp} />
+        <Route exact path="/venuesignup" component={VenueSignUp} />
+        <Route exact path="/venue" component={Venue} />
+
+        {/* <Route exact path="/books/:id" component={Detail} />
+        <Route component={NoMatch} /> */}
+      </Switch>
+    </div>
+  </Router>
+);
 
 export default App;
