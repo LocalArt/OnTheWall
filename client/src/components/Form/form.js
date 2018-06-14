@@ -1,7 +1,7 @@
 import React from "react";
-import "./Jumbotron.css";
+import "./form.css";
 
-const Jumbotron = () => (
+const Form = () => (
   <div className="jumbotron text-center">
     <h1>React Recipes</h1>
     <a
@@ -14,4 +14,4 @@ const Jumbotron = () => (
   </div>
 );
 
-export default Jumbotron;
+export default Form;
