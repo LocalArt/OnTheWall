@@ -21,12 +21,14 @@ import Home from "./pages/home";
 import Venue from "./pages/venue";
 import VenueSignUp from "./pages/venueSignup";
 import ArtistSignUp from "./pages/artistSignup";
+import Navbar from "./components/Navbar";
 
 const App = () => (
   <Router>
     <div>
       {/* <Nav /> */}
       <Switch>
+        <Navbar />
         {/* <Route exact path="/" component={Books} /> */}
         <Route exact path="/home" component={Home} />
         <Route path="/artist" component={Artist} />
