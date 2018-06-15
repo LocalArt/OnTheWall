@@ -46,14 +46,17 @@ const Navbar = props => (
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">
-              Action
+              Artists
             </a>
             <a class="dropdown-item" href="#">
-              Another action
+              Artists In...
             </a>
             <div class="dropdown-divider" />
             <a class="dropdown-item" href="#">
-              Something else here
+              Venues
+            </a>
+            <a class="dropdown-item" href="#">
+              Venues In...
             </a>
           </div>
         </li>
