@@ -9,29 +9,48 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class ArtistSignUp extends Component {
   state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
+    artists: [],
+    name: "",
+    email: "",
+    password: "",
+    city: "",
+    state: "",
+    zipcode: "",
+    facebook: "",
+    instagram: "",
+    phone: "",
+    biography: ""
   };
 
-  componentDidMount() {
-    this.loadBooks();
-  }
+  // componentDidMount() {
+  //   this.loadBooks();
+  // }
 
-  loadBooks = () => {
-    API.getBooks()
+  loadArtists = () => {
+    API.getArtists()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({
+          artists: [],
+          name: "",
+          email: "",
+          password: "",
+          city: "",
+          state: "",
+          zipcode: "",
+          facebook: "",
+          instagram: "",
+          phone: "",
+          biography: ""
+        })
       )
       .catch(err => console.log(err));
   };
 
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
-      .catch(err => console.log(err));
-  };
+  // deleteBook = id => {
+  //   API.deleteBook(id)
+  //     .then(res => this.loadBooks())
+  //     .catch(err => console.log(err));
+  // };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -42,13 +61,20 @@ class ArtistSignUp extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
+    if (this.state.name && this.state.email) {
+      API.saveArtist({
+        name: this.state.name,
+        email: this.state.email,
+        password: this.state.password,
+        city: this.state.city,
+        state: this.state.state,
+        zipcode: this.state.zipcode,
+        facebook: this.state.facebook,
+        instagram: this.state.instagram,
+        phone: this.state.phone,
+        biography: this.state.biography
       })
-        .then(res => this.loadBooks())
+        .then(res => this.loadArtists())
         .catch(err => console.log(err));
     }
   };
@@ -59,36 +85,82 @@ class ArtistSignUp extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Artist Sign Up</h1>
             </Jumbotron>
             <form>
               <Input
-                value={this.state.title}
+                value={this.state.name}
                 onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="name"
+                placeholder="Name (required)"
               />
               <Input
-                value={this.state.author}
+                value={this.state.email}
                 onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="email"
+                placeholder="Email (required)"
               />
-              <TextArea
-                value={this.state.synopsis}
+
+              <Input
+                value={this.state.password}
                 onChange={this.handleInputChange}
-                name="synopsis"
+                name="password"
+                placeholder="Password (required)"
+              />
+
+              <TextArea
+                value={this.state.biography}
+                onChange={this.handleInputChange}
+                name="biography"
                 placeholder="Synopsis (Optional)"
               />
+
+              <Input
+                value={this.state.city}
+                onChange={this.handleInputChange}
+                name="city"
+                placeholder="City (required)"
+              />
+
+              <Input
+                value={this.state.state}
+                onChange={this.handleInputChange}
+                name="state"
+                placeholder="State (required)"
+              />
+              <Input
+                value={this.state.zipcode}
+                onChange={this.handleInputChange}
+                name="zipcode"
+                placeholder="Zipcode (required)"
+              />
+              <Input
+                value={this.state.facebok}
+                onChange={this.handleInputChange}
+                name="facebook"
+                placeholder="Facebook (required)"
+              />
+              <Input
+                value={this.state.instagram}
+                onChange={this.handleInputChange}
+                name="instagram"
+                placeholder="Instagram (required)"
+              />
+              <Input
+                value={this.state.phone}
+                onChange={this.handleInputChange}
+                name="phone"
+                placeholder="Phone (required)"
+              />
               <FormBtn
-                disabled={!(this.state.author && this.state.title)}
+                disabled={!(this.state.name && this.state.email)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
+                Submit Artist
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-6 sm-12">
+          {/* <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
@@ -108,7 +180,7 @@ class ArtistSignUp extends Component {
             ) : (
               <h3>No Results to Display</h3>
             )}
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     );
