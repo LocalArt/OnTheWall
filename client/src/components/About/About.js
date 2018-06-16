@@ -8,6 +8,6 @@ const divStyle = {
 export const About = props => (
   <div style={divStyle}>
     <h3>{props.title}</h3>
-    <p>lorem epsom</p>
+    <p>lorem ipsum</p>
   </div>
 );
