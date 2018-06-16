@@ -27,8 +27,8 @@ const App = () => (
   <Router>
     <div>
       {/* <Nav /> */}
+      <Navbar />
       <Switch>
-        <Navbar />
         {/* <Route exact path="/" component={Books} /> */}
         <Route exact path="/home" component={Home} />
         <Route path="/artist" component={Artist} />
