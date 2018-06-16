@@ -1,18 +1,10 @@
 import React from "react";
-import "./Jumbotron.css";
+import "./Hero.css";
 
-const Jumbotron = () => (
-  <div className="jumbotron text-center">
-    <h1> {artistName} </h1>
-    <h2> {artistCity}, {artistState} </h2>
-    <a
-    //   target="_blank"
-    //   rel="noopener noreferrer"
-    //   href="http://www.recipepuppy.com/about/api/"
-    >
-    //   Powered by Recipe Puppy
-    </a>
+const Hero = props => (
+  <div className="hero text-center" style={{ backgroundImage: `url(${props.backgroundImage})` }}>
+    {props.children}
   </div>
 );
 
-export default Jumbotron;
+export default Hero;
