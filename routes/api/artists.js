@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const artistController = require("../../controllers/artistController");
+const venueController = require("../../controllers/venueController");
 
-// Matches with "/api/books"
+// Matches with "/api/books
 router
   .route("/")
   .get(artistController.findAll)
