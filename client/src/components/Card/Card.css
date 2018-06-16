@@ -1,33 +1,30 @@
-.list-overflow-container {
-  max-height: 545px;
-  border: 1px #DDDDDD solid;
-  border-radius: 4px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+.card {
+  width: 18rem;
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  margin-right: 10px;
 }
 
-.list-overflow-container ul {
-  margin: 0;
+.card-location {
+  margin-top: -6px;
+  font-size: 12px;
 }
 
-.list-overflow-container li {
+.card-artist {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+
+.card-title {
+  margin-top: -10px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.btn-card {
   border-radius: 0px;
-  border-left: none;
-  border-right: none;
-}
-
-.list-overflow-container li * {
-  cursor: pointer;
-}
-
-.list-overflow-container li a {
-  color: #2A878C;
-}
-
-.list-overflow-container li:first-child {
-  border-top: none;
-}
-
-.list-overflow-container li:last-child {
-  border-bottom: none;
+  background-color: black;
+  border: 0px;
+  font-size: 12px;
 }

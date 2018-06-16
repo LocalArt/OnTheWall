@@ -4,9 +4,9 @@ import "./Navbar.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <nav className="navbar navbar-custom navbar-expand-lg navbar-light">
     <a className="navbar-brand" href="#">
-      Navbar
+      ON THE WALL
     </a>
     <button
       className="navbar-toggler"
@@ -24,15 +24,25 @@ const Navbar = props => (
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
           <a className="nav-link" href="#">
-            Home <span className="sr-only">(current)</span>
+            Become a host <span className="sr-only">(current)</span>
           </a>
         </li>
-        <li className="nav-item">
+        <li className="nav-item active">
+          <a className="nav-link" href="#">
+            Become an artist <span className="sr-only">(current)</span>
+          </a>
+        </li>
+        <li className="nav-item active">
+          <a className="nav-link" href="#">
+            Log in <span className="sr-only">(current)</span>
+          </a>
+        </li>
+        {/* <li className="nav-item">
           <a className="nav-link" href="#">
             Link
           </a>
-        </li>
-        <li class="nav-item dropdown">
+        </li> */}
+        {/* <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -56,12 +66,12 @@ const Navbar = props => (
               Something else here
             </a>
           </div>
-        </li>
-        <li className="nav-item">
+        </li> */}
+        {/* <li className="nav-item">
           <a className="nav-link disabled" href="#">
             Disabled
           </a>
-        </li>
+        </li> */}
       </ul>
       <form className="form-inline my-2 my-lg-0">
         <input

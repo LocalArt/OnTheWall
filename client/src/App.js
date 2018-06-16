@@ -22,6 +22,7 @@ import Venue from "./pages/venue";
 import VenueSignUp from "./pages/venueSignup";
 import ArtistSignUp from "./pages/artistSignup";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 const App = () => (
   <Router>
@@ -30,6 +31,7 @@ const App = () => (
       <Navbar />
       <Switch>
         {/* <Route exact path="/" component={Books} /> */}
+        <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
         <Route path="/artist" component={Artist} />
         <Route exact path="/artistsignup" component={ArtistSignUp} />
