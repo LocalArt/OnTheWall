@@ -50,3 +50,43 @@ db.Artist.remove({})
     console.error(err);
     process.exit(1);
   });
+
+const venueSeed = [
+  {
+    venuename: "Brew Coffee",
+    email: "ClaytonRoop@gmail.com",
+    password: "Roop1178",
+    city: "Raleigh",
+    state: "North Carolina",
+    zipcode: "27604",
+    website: "www.brewcoffee.com",
+    instagram: "www.instagram.com/brewcoffee",
+    phone: "443-999-9999",
+    description: "Brew Coffee in Raleigh Serves Coffee  Hot and Cold",
+    date: new Date(Date.now())
+  },
+  {
+    venuename: "Starbucks Coffee",
+    email: "starbucsk@gmail.com",
+    password: "starbucks",
+    city: "Charleston",
+    state: "South Carolina",
+    zipcode: "27699",
+    website: "www.starbucks.com",
+    instagram: "www.instagram.com/starbucks",
+    phone: "443-777-9779",
+    description: "Brew Coffee in Raleigh Serves Coffee  Hot and Cold",
+    date: new Date(Date.now())
+  }
+];
+
+db.Venue.remove({})
+  .then(() => db.Venue.collection.insertMany(venueSeed))
+  .then(data => {
+    console.log(data.insertedIds.length + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
