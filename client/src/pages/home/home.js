@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../../components/Hero";
 import Card from "../../components/Card";
+import Footer from "../../components/Footer";
 import "./home.css";
 
 const Home = () => (
