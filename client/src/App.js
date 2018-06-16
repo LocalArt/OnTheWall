@@ -22,6 +22,7 @@ import Venue from "./pages/venue";
 import VenueSignUp from "./pages/venueSignup";
 import ArtistSignUp from "./pages/artistSignup";
 import Navbar from "./components/Navbar";
+/* import Footer from "./components/Footer"; */
 
 const App = () => (
   <Router>
