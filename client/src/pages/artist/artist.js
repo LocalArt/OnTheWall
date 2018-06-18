@@ -1,5 +1,7 @@
 import React from "react";
 import Hero from "../../components/Hero";
+import Upload from "../../components/Upload";
+
 
 const Artist = () => (
   <div>
@@ -9,6 +11,11 @@ const Artist = () => (
     </Hero>
 
     <h1>HOLD FOR ARTIST PAGE YO!!!!!!!</h1>
+
+    <Upload>
+      <p>Please upload your images</p>
+    </Upload>
+
   </div>
 );
 
