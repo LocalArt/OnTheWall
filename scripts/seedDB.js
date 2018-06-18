@@ -90,3 +90,29 @@ db.Venue.remove({})
     console.error(err);
     process.exit(1);
   });
+
+const imageSeed = [
+  {
+    imageUrl:
+      "https://www.flickr.com/photos/bill_angel/11419643834/in/faves-12403504@N02/",
+    description: "People in the rain",
+    price: 43.44
+  },
+  {
+    imageUrl:
+      "https://www.flickr.com/photos/bill_angel/11420510054/in/faves-britishlibrary/",
+    description: "saxaphone thing",
+    price: 65.88
+  }
+];
+
+db.Image.remove({})
+  .then(() => db.Image.collection.insertMany(imageSeed))
+  .then(data => {
+    console.log(data.insertedIds.length + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
