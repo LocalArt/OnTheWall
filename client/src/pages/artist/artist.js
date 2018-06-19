@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../../components/Hero";
+import About from "../../components/About";
 
 const Artist = () => (
   <div>
@@ -7,7 +8,6 @@ const Artist = () => (
       <h1>PABLO PICASSO</h1>
       <h2>Raleigh, NC </h2>
     </Hero>
-
     <h1>HOLD FOR ARTIST PAGE YO!!!!!!!</h1>
   </div>
 );
