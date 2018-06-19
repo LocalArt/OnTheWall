@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Card.css";
 
 const Card = props => (
   <div className="card">
+    {console.log("props.id= " + JSON.stringify(props))}
     <img
       className="card-img-top"
       src="https://dg19s6hp6ufoh.cloudfront.net/pictures/613209425/large/PicassoBullsHead.jpeg?1491535886"
@@ -14,9 +16,9 @@ const Card = props => (
         {props.city}, {props.state}
       </p>
       <p className="card-title">Bull's Head</p>
-      <a href="#" className="btn btn-primary btn-card">
-        Buy now
-      </a>
+      <button href="#" className="btn btn-primary btn-card">
+        <Link to={"/artist/" + props.id}>Artist Bio</Link>
+      </button>
     </div>
   </div>
 );
