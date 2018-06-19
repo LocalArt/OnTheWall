@@ -1,16 +1,22 @@
-import * as firebase from 'firebase';
+const firebase = window.firebase;
+
 
 const config = {
-  apiKey: "AIzaSyCNiF9PW4ukkxb3978QaMS78Eh87MJm910",
-  authDomain: "on-the-wall-6db67.firebaseapp.com",
-  databaseURL: "https://on-the-wall-6db67.firebaseio.com",
-  projectId: "on-the-wall-6db67",
-  storageBucket: "on-the-wall-6db67.appspot.com",
-  messagingSenderId: "933641674676"
+  apiKey: "AIzaSyBbR4P8ZZhOdb8ytdILRcul-m_CDprW-YQ",
+  authDomain: "i-am-awesome-d9a14.firebaseapp.com",
+  databaseURL: "https://i-am-awesome-d9a14.firebaseio.com",
+  projectId: "i-am-awesome-d9a14",
+  storageBucket: "i-am-awesome-d9a14.appspot.com",
+  messagingSenderId: "672862850689"
 };
 
 firebase.initializeApp(config);
 
-firebase.database().ref().set({
-  name: 'Marina'
-});
+
+const storage = window.firebase.storage;
+const database = window.firebase.database;
+
+export {
+  storage,
+  database
+}
