@@ -17,6 +17,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Artist from "./pages/artist";
+import Images from "./pages/images";
 import Home from "./pages/home";
 import Venue from "./pages/venue";
 import VenueSignUp from "./pages/venueSignup";
@@ -27,7 +28,6 @@ import Hero from "./components/Hero";
 
 /* import Footer from "./components/Footer"; */
 
-
 const App = () => (
   <Router>
     <div>
@@ -37,7 +37,9 @@ const App = () => (
         {/* <Route exact path="/" component={Books} /> */}
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
-        <Route path="/artist" component={Artist} />
+        <Route path="/artist/:id" component={Artist} />
+        <Route path="/images" component={Image} />
+        <Route path="/images/:id" component={Image} />
         <Route exact path="/artistsignup" component={ArtistSignUp} />
         <Route exact path="/venuesignup" component={VenueSignUp} />
         <Route exact path="/venue" component={Venue} />

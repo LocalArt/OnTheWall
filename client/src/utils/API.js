@@ -32,5 +32,20 @@ export default {
   // Saves a artist to the database
   saveVenue: function(venueData) {
     return axios.post("/api/venue", venueData);
+  },
+  getImages: function() {
+    return axios.get("/api/images");
+  },
+  // Gets the artist with the given id
+  getSingleImage: function(id) {
+    return axios.get("/api/images/" + id);
+  },
+  // Deletes the artist with the given id
+  deleteImage: function(id) {
+    return axios.delete("/api/images/" + id);
+  },
+  // Saves a artist to the database
+  saveImage: function(imageData) {
+    return axios.post("/api/images", imageData);
   }
 };

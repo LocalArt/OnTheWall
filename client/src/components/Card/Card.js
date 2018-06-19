@@ -9,8 +9,10 @@ const Card = props => (
       alt="Card image cap"
     />
     <div className="card-body">
-      <h5 className="card-artist">Pablo Picasso</h5>
-      <p className="card-location">Raleigh, NC</p>
+      <h5 className="card-artist">{props.name}</h5>
+      <p className="card-location">
+        {props.city}, {props.state}
+      </p>
       <p className="card-title">Bull's Head</p>
       <a href="#" className="btn btn-primary btn-card">
         Buy now
