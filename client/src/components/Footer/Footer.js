@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const divStyle = {
   color: "blue",
   padding: "8px",
-  position: "fixed",
+  position: "sticky-bottom",
   width: "100%",
   bottom: "18px",
   backgroundColor: "grey",
