@@ -68,19 +68,8 @@ class Artist extends Component {
               {this.state.artist.city}, {this.state.artist.state}
             </h2>
           </Hero>
-
-          <h1>HOLD FOR ARTIST PAGE YO!!!!!!!</h1>
         </div>
 
-        <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <h1>
-                {this.state.artist.name} by {this.state.artist.email}
-              </h1>
-            </Jumbotron>
-          </Col>
-        </Row>
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
