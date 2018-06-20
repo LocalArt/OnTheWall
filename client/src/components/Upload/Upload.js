@@ -11,16 +11,6 @@ class Upload extends React.Component {
     url: ''
   }
 
-  componentDidMount = async function () {
-
-    const { setState } = this;
-    var storageRef = storage().ref('');
-    const data = await storageRef.child('artists/categories/Screen Shot 2018-05-19 at 11.10.43 AM.png').getDownloadURL();
-
-    this.setState({ url: data });
-  };
-
-
   uploadProgress = (snapshot) => {
     // TODO
     // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
@@ -67,17 +57,19 @@ class Upload extends React.Component {
   //event listenener for file upload
   fileUploadHandler = () => {
     const fd = new FormData();
-    fd.append('image', this.state.selectedFile, this.state.selectedFile.name);
+    fd.append('artist', this.state.selectedFile, this.state.selectedFile.name);
 
     const file = this.state.selectedFile; // file name
     const metadata = {
-      contentType: 'image/jpeg'
+      contentType: 'image/jpeg',
+      //id: 'some unique id'
     };
 
     // .ref(/artists/ + 'categories' + 'accimeesterlin');
     const storageRef = storage().ref('artists/' + 'categories'); // ISSUE
     const uploadTask = storageRef.child(file.name).put(file, metadata);
-    uploadTask.on(storage.TaskEvent.STATE_CHANGED, this.uploadProgress, this.uploadError, function () {
+    uploadTask.on(storage.TaskEvent.STATE_CHANGED, this.uploadProgress, this.uploadError, function (snapshot) {
+      console.log(uploadTask.snapshot);
       // Upload completed successfully, now we can get the download URL
       uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
         console.log('File available at', downloadURL);
@@ -93,11 +85,20 @@ class Upload extends React.Component {
         <input type="file" onChange={this.fileSelectedHandler} ref={fileInput => this.fileInput = fileInput} />
         {/*<button onClick={() => this.fileInput.click()}>Pick File</button>*/}
         <button onClick={this.fileUploadHandler}>Upload</button>
-
+       
         <img src={this.state.url} alt="" />
       </div>
     );
-  }
+  };
+
+  componentDidMount = async function () {
+    const imagePath="";
+    const { setState } = this;
+    var storageRef = storage().ref('');
+    const data = await storageRef.child('').getDownloadURL();
+    this.setState({ url: data });
+  };
+
 }
 
 export default Upload;
