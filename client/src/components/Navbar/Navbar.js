@@ -30,9 +30,9 @@ class Navbar extends React.Component {
   render() {
     console.log(this.state.searchCategory);
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-custom navbar-expand-lg navbar-light">
         <a className="navbar-brand" href="#">
-          Navbar
+          ON THE WALL
         </a>
         <button
           className="navbar-toggler"
@@ -50,22 +50,24 @@ class Navbar extends React.Component {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
               <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
+                Become an artist <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li className="nav-item">
+
+            <li className="nav-item active">
               <a className="nav-link" href="#">
-                Link
+                Become a venue <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" href="#">
-                Disabled
+
+            <li className="nav-item active">
+              <a className="nav-link" href="#">
+                About us <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown pull-right navbar-right">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link navbar-right dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
