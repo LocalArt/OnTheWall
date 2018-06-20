@@ -12,6 +12,12 @@ const artistSchema = new Schema({
   instagram: { type: String },
   phone: { type: String },
   biography: String,
+  image: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Image"
+    }
+  ],
   date: { type: Date, default: Date.now }
 });
 

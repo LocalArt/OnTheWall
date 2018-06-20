@@ -4,14 +4,11 @@ import { Col, Row, Container } from "../../components/Grid";
 import Card from "../../components/Card";
 import Jumbotron from "../../components/Jumbotron";
 import Hero from "../../components/Hero";
-
-import Upload from "../../components/Upload";
-
 import API from "../../utils/API";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
-class Artist extends Component {
+class Images extends Component {
   state = {
     artist: {},
     imageUrl: "",
@@ -46,16 +43,10 @@ class Artist extends Component {
     });
   };
 
-
-    <h1>HOLD FOR ARTIST PAGE YO!!!!!!!</h1>
-
-);
-
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.imageUrl && this.state.imageTitle) {
-      API.saveImage({
-        id: this.props.match.params.id,
+    if (this.state.name && this.state.email) {
+      API.saveArtist({
         imageUrl: this.state.imageUrl,
         imageTitle: this.state.imageTitle,
         description: this.state.description,
@@ -78,8 +69,6 @@ class Artist extends Component {
           </Hero>
 
           <h1>HOLD FOR ARTIST PAGE YO!!!!!!!</h1>
-          <Upload
-          />
         </div>
 
         <Row>
@@ -123,7 +112,6 @@ class Artist extends Component {
               name="imageTitle"
               placeholder="Image Title"
             />
-
             <Input
               value={this.state.price}
               onChange={this.handleInputChange}
@@ -136,7 +124,12 @@ class Artist extends Component {
               name="description"
               placeholder="Description "
             />
-            <FormBtn onClick={this.handleFormSubmit}>Submit Image</FormBtn>
+            <FormBtn
+              disabled={!(this.state.name && this.state.email)}
+              onClick={this.handleFormSubmit}
+            >
+              Submit Artist
+            </FormBtn>
           </form>
         </Row>
       </Container>
@@ -144,7 +137,7 @@ class Artist extends Component {
   }
 }
 
-export default Artist;
+export default Images;
 
 // const Artist = () => (
 //   <div>
