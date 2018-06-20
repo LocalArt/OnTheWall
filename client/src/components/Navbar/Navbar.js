@@ -23,11 +23,7 @@ class Navbar extends React.Component {
       case "VenueLocation":
         return "Enter Venue Location...";
       default:
-<<<<<<< HEAD
-        return "<-- Choose a Search Option";
-=======
         return "<< Choose Search Option";
->>>>>>> b2c8d1e281b65ded6e065144c4fd383dfb13fef1
     }
   };
 
