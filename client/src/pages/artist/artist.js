@@ -4,6 +4,9 @@ import { Col, Row, Container } from "../../components/Grid";
 import Card from "../../components/Card";
 import Jumbotron from "../../components/Jumbotron";
 import Hero from "../../components/Hero";
+
+import Upload from "../../components/Upload";
+
 import API from "../../utils/API";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
@@ -43,6 +46,11 @@ class Artist extends Component {
     });
   };
 
+
+    <h1>HOLD FOR ARTIST PAGE YO!!!!!!!</h1>
+
+);
+
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.imageUrl && this.state.imageTitle) {
@@ -70,6 +78,8 @@ class Artist extends Component {
           </Hero>
 
           <h1>HOLD FOR ARTIST PAGE YO!!!!!!!</h1>
+          <Upload
+          />
         </div>
 
         <Row>
