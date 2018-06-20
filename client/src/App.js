@@ -23,9 +23,10 @@ import Venue from "./pages/venue";
 import VenueSignUp from "./pages/venueSignup";
 import ArtistSignUp from "./pages/artistSignup";
 import Navbar from "./components/Navbar";
-
+import About from "./components/About";
 import Hero from "./components/Hero";
 
+import Footer from "./components/Footer";
 /* import Footer from "./components/Footer"; */
 
 const App = () => (
@@ -47,6 +48,7 @@ const App = () => (
         {/* <Route exact path="/books/:id" component={Detail} />
         <Route component={NoMatch} /> */}
       </Switch>
+      <Footer />
     </div>
   </Router>
 );

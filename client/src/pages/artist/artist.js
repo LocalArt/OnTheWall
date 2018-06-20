@@ -4,6 +4,9 @@ import { Col, Row, Container } from "../../components/Grid";
 import Card from "../../components/Card";
 import Jumbotron from "../../components/Jumbotron";
 import Hero from "../../components/Hero";
+
+import Upload from "../../components/Upload";
+
 import API from "../../utils/API";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
