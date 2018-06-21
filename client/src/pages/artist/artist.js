@@ -72,7 +72,7 @@ class Artist extends Component {
             </h2>
           </Hero>
         </div>
-
+        <Upload />
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
