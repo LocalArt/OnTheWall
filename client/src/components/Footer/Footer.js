@@ -1,14 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import "./Jumbotron.css";
 
 const divStyle = {
-  padding: "8px"
+  color: "blue",
+  padding: "8px",
+  position: "sticky-bottom",
+  width: "100%",
+  bottom: "18px",
+  backgroundColor: "grey",
+  height: "40px"
 };
 
 const Footer = props => (
   <div className="Footer text-center">
-    <h4>FlipArtWall Production</h4>
-    <h5>By Andy, Bob, Clay, Marina, and Muhammad</h5>
+    <div style={divStyle}>
+      <h5>FlipArtWall Production</h5>
+      <h6>By Andy, Bob, Clay, Marina, and Muhammad</h6>
+    </div>
   </div>
 );
 

@@ -3,37 +3,36 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 class Navbar extends React.Component {
-  
   state = {
     searchCategory: "Default"
-  }
+  };
 
   //Depending on the current path, this component sets the "active" class on the appropriate navigation link item
-  searchWhat = (dropDownItem) => {
-    this.setState({searchCategory: dropDownItem})
-  }
+  searchWhat = dropDownItem => {
+    this.setState({ searchCategory: dropDownItem });
+  };
 
   renderPlaceholder = () => {
-    switch(this.state.searchCategory) {
+    switch (this.state.searchCategory) {
       case "Artist":
         return "Enter Artist Here...";
-      case "ArtistLocation": 
+      case "ArtistLocation":
         return "Enter Artist Location...";
-      case "Venue": 
+      case "Venue":
         return "Enter Venue Here...";
       case "VenueLocation":
-        return "Enter Venue Location..."
-      default: 
-        return "<-- Choose a Search Option"
+        return "Enter Venue Location...";
+      default:
+        return "<< Choose Search Option";
     }
-  }
+  };
 
   render() {
     console.log(this.state.searchCategory);
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-custom navbar-expand-lg navbar-light">
         <a className="navbar-brand" href="#">
-          Navbar
+          ON THE WALL
         </a>
         <button
           className="navbar-toggler"
@@ -51,22 +50,24 @@ class Navbar extends React.Component {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
               <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
+                Become an artist <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li className="nav-item">
+
+            <li className="nav-item active">
               <a className="nav-link" href="#">
-                Link
+                Become a venue <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" href="#">
-                Disabled
+
+            <li className="nav-item active">
+              <a className="nav-link" href="#">
+                About us <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown pull-right navbar-right">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link navbar-right dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -77,17 +78,33 @@ class Navbar extends React.Component {
                 Search
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <div className="dropdown-item" href="#" onClick = {() => this.searchWhat("Artist")}>
+                <div
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => this.searchWhat("Artist")}
+                >
                   Artists
                 </div>
-                <div className="dropdown-item" href="#" onClick = {() => this.searchWhat("ArtistLocation")}>
+                <div
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => this.searchWhat("ArtistLocation")}
+                >
                   Artists In...
                 </div>
                 <div className="dropdown-divider" />
-                <div className="dropdown-item" href="#" onClick = {() => this.searchWhat("Venue")}>
+                <div
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => this.searchWhat("Venue")}
+                >
                   Venues
                 </div>
-                <div className="dropdown-item" href="#" onClick = {() => this.searchWhat("VenueLocation")}>
+                <div
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => this.searchWhat("VenueLocation")}
+                >
                   Venues In...
                 </div>
               </div>
@@ -100,7 +117,10 @@ class Navbar extends React.Component {
                   placeholder={this.renderPlaceholder()}
                   aria-label="Search"
                 />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+                <button
+                  className="btn btn-outline-success my-2 my-sm-0"
+                  type="submit"
+                >
                   Search
                 </button>
               </form>
@@ -108,7 +128,8 @@ class Navbar extends React.Component {
           </ul>
         </div>
       </nav>
-  );}
+    );
+  }
 }
 
 export default Navbar;

@@ -17,16 +17,17 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Artist from "./pages/artist";
+import Images from "./pages/images";
 import Home from "./pages/home";
 import Venue from "./pages/venue";
 import VenueSignUp from "./pages/venueSignup";
 import ArtistSignUp from "./pages/artistSignup";
 import Navbar from "./components/Navbar";
-
+import About from "./components/About";
 import Hero from "./components/Hero";
 
+import Footer from "./components/Footer";
 /* import Footer from "./components/Footer"; */
-
 
 const App = () => (
   <Router>
@@ -37,7 +38,9 @@ const App = () => (
         {/* <Route exact path="/" component={Books} /> */}
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
-        <Route path="/artist" component={Artist} />
+        <Route path="/artist/:id" component={Artist} />
+        <Route path="/images" component={Image} />
+        <Route path="/images/:id" component={Image} />
         <Route exact path="/artistsignup" component={ArtistSignUp} />
         <Route exact path="/venuesignup" component={VenueSignUp} />
         <Route exact path="/venue" component={Venue} />
@@ -45,6 +48,7 @@ const App = () => (
         {/* <Route exact path="/books/:id" component={Detail} />
         <Route component={NoMatch} /> */}
       </Switch>
+      <Footer />
     </div>
   </Router>
 );
