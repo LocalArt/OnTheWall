@@ -10,6 +10,7 @@ const Card = props => (
       src="https://dg19s6hp6ufoh.cloudfront.net/pictures/613209425/large/PicassoBullsHead.jpeg?1491535886"
       alt="Card image cap"
     />
+
     <div className="card-body">
       <h5 className="card-artist">{props.name}</h5>
       <p className="card-location">
