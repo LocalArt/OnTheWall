@@ -14,8 +14,7 @@ const artistSchema = new Schema({
   biography: String,
   image: [
     {
-      type: Schema.Types.ObjectId,
-      ref: "Image"
+      type: Schema.Types.Mixed
     }
   ],
   date: { type: Date, default: Date.now }
