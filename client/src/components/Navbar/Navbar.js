@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 class Navbar extends React.Component {
   state = {
-    searchCategory: "Default"
+    searchCategory: "By Artist"
   };
 
   //Depending on the current path, this component sets the "active" class on the appropriate navigation link item
@@ -14,13 +14,13 @@ class Navbar extends React.Component {
 
   renderPlaceholder = () => {
     switch (this.state.searchCategory) {
-      case "Artist":
+      case "By Artist":
         return "Enter Artist Here...";
-      case "ArtistLocation":
+      case "By Artist Location":
         return "Enter Artist Location...";
-      case "Venue":
+      case "By Venue":
         return "Enter Venue Here...";
-      case "VenueLocation":
+      case "By Venue Location":
         return "Enter Venue Location...";
       default:
         return "<< Choose Search Option";
@@ -75,22 +75,22 @@ class Navbar extends React.Component {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Search
+                <span class="fas fa-search"></span> {this.state.searchCategory}
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <div
                   className="dropdown-item"
                   href="#"
-                  onClick={() => this.searchWhat("Artist")}
+                  onClick={() => this.searchWhat("By Artist")}
                 >
-                  Artists
+                  By Artists
                 </div>
                 <div
                   className="dropdown-item"
                   href="#"
-                  onClick={() => this.searchWhat("ArtistLocation")}
+                  onClick={() => this.searchWhat("By Artist Location")}
                 >
-                  Artists In...
+                  By Artist Location
                 </div>
                 <div className="dropdown-divider" />
                 <div
@@ -98,19 +98,19 @@ class Navbar extends React.Component {
                   href="#"
                   onClick={() => this.searchWhat("Venue")}
                 >
-                  Venues
+                  By Venue
                 </div>
                 <div
                   className="dropdown-item"
                   href="#"
-                  onClick={() => this.searchWhat("VenueLocation")}
+                  onClick={() => this.searchWhat("By Venue Location")}
                 >
-                  Venues In...
+                  By Venue Location
                 </div>
               </div>
             </li>
             <li>
-              <form className="form-inline my-2 my-lg-0">
+              <form id="searchForm" className="form-inline my-2 my-lg-0">
                 <input
                   className="form-control mr-sm-2"
                   type="search"
