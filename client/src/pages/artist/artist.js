@@ -126,6 +126,8 @@ class Artist extends Component {
   }
 }
 
+console.log("Michael is Cool");
+
 export default Artist;
 
 // const Artist = () => (
