@@ -17,6 +17,9 @@ export default {
   saveArtist: function(artistData) {
     return axios.post("/api/artists", artistData);
   },
+  updateArtist: function(id, artistData) {
+    return axios.put("/api/artists/" + id, artistData);
+  },
 
   getVenues: function() {
     return axios.get("/api/venue");
