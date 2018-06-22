@@ -19,8 +19,13 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
+    console.log("this is req.body " + JSON.stringify(req.body, null, 2));
+    console.log("id = " + req.params.id);
     db.Artist.findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => {
+        console.log(dbModel);
+        res.json(dbModel);
+      })
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {

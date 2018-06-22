@@ -2,22 +2,17 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import Card from "../../components/Card";
+import ArtCard from "../../components/ArtCard";
 import Jumbotron from "../../components/Jumbotron";
 import Hero from "../../components/Hero";
-
 import Upload from "../../components/Upload";
-
 import API from "../../utils/API";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Artist extends Component {
   state = {
-    artist: {},
-    imageUrl: "",
-    imageTitle: "",
-    description: "",
-    price: ""
+    artist: { image: [] }
   };
   // When this component mounts, grab the book with the _id of this.props.match.params.id
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
@@ -27,39 +22,28 @@ class Artist extends Component {
       .then(res => this.setState({ artist: res.data }))
       .catch(err => console.log(err));
   }
-  loadArtists = () => {
-    API.getArtists()
-      .then(res =>
-        this.setState({
-          imageUrl: "",
-          imageTitle: "",
-          description: "",
-          price: ""
-        })
-      )
-      .catch(err => console.log(err));
-  };
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.imageUrl && this.state.imageTitle) {
-      API.saveImage({
-        id: this.props.match.params.id,
-        imageUrl: this.state.imageUrl,
-        imageTitle: this.state.imageTitle,
-        description: this.state.description,
-        price: this.state.price
-      })
-        .then(res => this.loadArtists())
-        .catch(err => console.log(err));
-    }
-  };
+  // handleInputChange = event => {
+  //   const { name, value } = event.target;
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // };
+
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   if (this.state.imageUrl && this.state.imageTitle) {
+  //     API.saveImage({
+  //       id: this.props.match.params.id,
+  //       imageUrl: this.state.imageUrl,
+  //       imageTitle: this.state.imageTitle,
+  //       description: this.state.description,
+  //       price: this.state.price
+  //     })
+  //       .then(res => this.loadArtists())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
 
   render() {
     return (
@@ -72,7 +56,7 @@ class Artist extends Component {
             </h2>
           </Hero>
         </div>
-        <Upload />
+        <Upload userId={this.props.match.params.id} />
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
@@ -85,21 +69,24 @@ class Artist extends Component {
           <Col size="md-2">
             <Link to="/">← Back to Artist</Link>
           </Col>
-          <Card
-            name={this.state.artist.name}
-            city={this.state.artist.city}
-            state={this.state.artist.state}
-          />
+          {this.state.artist.image.map(image => (
+            <ArtCard
+              url={image.url}
+              title={image.imageTitle}
+              description={image.description}
+              state={this.state.artist.state}
+            />
+          ))}
         </Row>
         <Row>
           <form>
-            <Input
+            {/* <Input
               value={this.state.imageUrL}
               onChange={this.handleInputChange}
               name="imageUrl"
               placeholder="Image URL"
-            />
-            <Input
+            /> */}
+            {/* <Input
               value={this.state.imageTitle}
               onChange={this.handleInputChange}
               name="imageTitle"
@@ -117,8 +104,9 @@ class Artist extends Component {
               onChange={this.handleInputChange}
               name="description"
               placeholder="Description "
-            />
-            <FormBtn onClick={this.handleFormSubmit}>Submit Image</FormBtn>
+            /> */}
+            <Upload />
+            {/* <FormBtn onClick={this.handleFormSubmit}>Submit Image</FormBtn> */}
           </form>
         </Row>
       </Container>
