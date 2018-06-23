@@ -27,11 +27,26 @@ class Navbar extends React.Component {
     }
   };
 
+  selectSearchResult = () => {
+    switch (this.state.searchCategory) {
+      case "By Artist":
+        return "/artistSearchResult";
+      case "By Artist Location":
+        return "/artistSearchResult";
+      case "By Venue":
+        return "/venueSearchResult";
+      case "By Venue Location":
+        return "/venueSearchResult";
+      default:
+        return "<< Choose Search Option";
+    }
+  }
+
   render() {
     console.log(this.state.searchCategory);
     return (
       <nav className="navbar navbar-custom navbar-expand-lg navbar-light">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           ON THE WALL
         </a>
         <button
@@ -49,13 +64,13 @@ class Navbar extends React.Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/artistSignup">
                 Become an artist <span className="sr-only">(current)</span>
               </a>
             </li>
 
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/venueSignup">
                 Become a venue <span className="sr-only">(current)</span>
               </a>
             </li>
@@ -96,7 +111,7 @@ class Navbar extends React.Component {
                 <div
                   className="dropdown-item"
                   href="#"
-                  onClick={() => this.searchWhat("Venue")}
+                  onClick={() => this.searchWhat("By Venue")}
                 >
                   By Venue
                 </div>
@@ -117,11 +132,8 @@ class Navbar extends React.Component {
                   placeholder={this.renderPlaceholder()}
                   aria-label="Search"
                 />
-                <button
-                  className="btn btn-outline-success my-2 my-sm-0"
-                  type="submit"
-                >
-                  Search
+                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+                  <Link to={this.selectSearchResult()}>Search</Link>
                 </button>
               </form>
             </li>
