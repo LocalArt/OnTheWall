@@ -13,6 +13,11 @@ const ArtCard = props => (
       <button href="#" className="btn btn-primary btn-card">
         <Link to={"/artist/" + props.id}>Artist Bio</Link>
       </button>
+      <button href="#" className="btn btn-primary btn-card">
+        <Link to={"/artist/" + props.id + "/contact/" + props.title}>
+          Contact to Buy
+        </Link>
+      </button>
     </div>
   </div>
 );

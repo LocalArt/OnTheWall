@@ -4,6 +4,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import Card from "../../components/Card";
 import ArtCard from "../../components/ArtCard";
 import Jumbotron from "../../components/Jumbotron";
+import About from "../../components/About";
 import Hero from "../../components/Hero";
 import Upload from "../../components/Upload";
 import API from "../../utils/API";
@@ -49,7 +50,13 @@ class Artist extends Component {
     return (
       <Container fluid>
         <div>
-          <Hero backgroundImage="https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9">
+          <Hero
+            backgroundImage={
+              this.state.artist.image == false
+                ? "https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9"
+                : this.state.artist.image[1].url
+            }
+          >
             <h1>{this.state.artist.name}</h1>
             <h2>
               {this.state.artist.city}, {this.state.artist.state}
@@ -60,7 +67,11 @@ class Artist extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Synopsis</h1>
+              <h1>Synopsis</h1>{" "}
+              <About
+                name={this.state.artist.name}
+                desription={this.state.artist.biography}
+              />
               <p>{this.state.artist.biography}</p>
             </article>
           </Col>
@@ -75,6 +86,7 @@ class Artist extends Component {
               title={image.imageTitle}
               description={image.description}
               state={this.state.artist.state}
+              id={this.props.match.params.id}
             />
           ))}
         </Row>

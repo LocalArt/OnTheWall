@@ -21,6 +21,7 @@ import Images from "./pages/images";
 import Home from "./pages/home";
 import Venue from "./pages/venue";
 import VenueSignUp from "./pages/venueSignup";
+import Contact from "./pages/contact";
 import ArtistSignUp from "./pages/artistSignup";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
@@ -38,7 +39,10 @@ const App = () => (
         {/* <Route exact path="/" component={Books} /> */}
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
-        <Route path="/artist/:id" component={Artist} />
+        <Route exact path="/artist/:id" component={Artist} />
+
+        <Route path="/artist/:id/contact" component={Contact} />
+
         <Route path="/images" component={Image} />
         <Route path="/images/:id" component={Image} />
         <Route exact path="/artistsignup" component={ArtistSignUp} />
