@@ -1,7 +1,19 @@
 import React, { Component } from "react";
+import Card from "../../components/Card";
+import API from "../../utils/API";
 
-class SearchResult extends Component {
+class ArtistSearchResult extends Component {
+    state = {
+        artist: []
+    };
     
+      componentDidMount() {
+        console.log("");
+        API.getArtists()
+          .then(res => this.setState({ artist: res.data }))
+          .catch(err => console.log(err));
+    }
+
     render() {
       return (
         <div className="row justify-content-center home-cards">
@@ -19,4 +31,4 @@ class SearchResult extends Component {
     }
   }
   
-  export default SearchResult;
+  export default ArtistSearchResult;
