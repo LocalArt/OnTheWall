@@ -30,13 +30,13 @@ class Navbar extends React.Component {
   selectSearchResult = () => {
     switch (this.state.searchCategory) {
       case "By Artist":
-        return "/artistSearchResult/";
+        return "/artistSearchResult";
       case "By Artist Location":
-        return "/artistSearchResult/";
+        return "/artistSearchResult";
       case "By Venue":
-        return "/venueSearchResult/";
+        return "/venueSearchResult";
       case "By Venue Location":
-        return "/venueSearchResult/";
+        return "/venueSearchResult";
       default:
         return "<< Choose Search Option";
     }
@@ -133,7 +133,6 @@ class Navbar extends React.Component {
                   aria-label="Search"
                 />
                 <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-                  {console.log(this.selectSearchResult())}
                   <Link to={this.selectSearchResult()}>Search</Link>
                 </button>
               </form>
