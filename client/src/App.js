@@ -22,6 +22,7 @@ import Home from "./pages/home";
 import Venue from "./pages/venue";
 import VenueSignUp from "./pages/venueSignup";
 import ArtistSignUp from "./pages/artistSignup";
+import SearchResult from "./pages/searchResult";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Hero from "./components/Hero";
@@ -44,7 +45,7 @@ const App = () => (
         <Route exact path="/artistsignup" component={ArtistSignUp} />
         <Route exact path="/venuesignup" component={VenueSignUp} />
         <Route exact path="/venue" component={Venue} />
-
+        <Route exact path="/searchresult" component={SearchResult} />
         {/* <Route exact path="/books/:id" component={Detail} />
         <Route component={NoMatch} /> */}
       </Switch>
