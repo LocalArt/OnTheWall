@@ -1,4 +1,8 @@
 .art-fullsize {
   max-width: 700px;
-  max-height: 600px;
+  max-height: 400px;
+}
+
+.artModal-width {
+  width: 700px;
 }
