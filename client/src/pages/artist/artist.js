@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import Card from "../../components/Card";
+import ArtCard from "../../components/ArtCard";
 import Jumbotron from "../../components/Jumbotron";
 import Hero from "../../components/Hero";
 import Upload from "../../components/Upload";
@@ -11,11 +12,7 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Artist extends Component {
   state = {
-    artist: {},
-    imageUrl: "",
-    imageTitle: "",
-    description: "",
-    price: ""
+    artist: { image: [] }
   };
   // When this component mounts, grab the book with the _id of this.props.match.params.id
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
@@ -33,20 +30,20 @@ class Artist extends Component {
   //   });
   // };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.imageUrl && this.state.imageTitle) {
-      API.saveImage({
-        id: this.props.match.params.id,
-        imageUrl: this.state.imageUrl,
-        imageTitle: this.state.imageTitle,
-        description: this.state.description,
-        price: this.state.price
-      })
-        .then(res => this.loadArtists())
-        .catch(err => console.log(err));
-    }
-  };
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   if (this.state.imageUrl && this.state.imageTitle) {
+  //     API.saveImage({
+  //       id: this.props.match.params.id,
+  //       imageUrl: this.state.imageUrl,
+  //       imageTitle: this.state.imageTitle,
+  //       description: this.state.description,
+  //       price: this.state.price
+  //     })
+  //       .then(res => this.loadArtists())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
 
   render() {
     return (
@@ -72,11 +69,14 @@ class Artist extends Component {
           <Col size="md-2">
             <Link to="/">← Back to Artist</Link>
           </Col>
-          <Card
-            name={this.state.artist.name}
-            city={this.state.artist.city}
-            state={this.state.artist.state}
-          />
+          {this.state.artist.image.map(image => (
+            <ArtCard
+              url={image.url}
+              title={image.imageTitle}
+              description={image.description}
+              state={this.state.artist.state}
+            />
+          ))}
         </Row>
         <Row>
           <form>
@@ -113,6 +113,8 @@ class Artist extends Component {
     );
   }
 }
+
+console.log("Michael is Cool");
 
 export default Artist;
 
