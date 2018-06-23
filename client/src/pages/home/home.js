@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactPaginate from 'react-paginate';
 import Hero from "../../components/Hero";
 import Card from "../../components/Card";
 import Footer from "../../components/Footer";

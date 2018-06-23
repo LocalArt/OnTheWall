@@ -28,6 +28,7 @@
     "firebase-functions": "^1.0.4",
     "if-env": "^1.0.4",
     "mongoose": "^5.0.17",
-    "react-firebase-file-uploader": "^2.4.1"
+    "react-firebase-file-uploader": "^2.4.1",
+    "react-paginate": "^5.2.3"
   }
 }
