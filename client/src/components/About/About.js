@@ -8,7 +8,7 @@ const divStyle = {
 const About = props => (
   <div style={divStyle}>
     <h3>{props.title}</h3>
-    <p>lorem ipsum</p>
+    <p>{props.bioscription}</p>
   </div>
 );
 
