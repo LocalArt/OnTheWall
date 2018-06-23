@@ -1,1 +1,1 @@
-export { default } from "./ArtModal";
+export { default } from "./ArtModalBootstrap";
