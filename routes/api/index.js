@@ -6,6 +6,6 @@ const imageRoutes = require("./image");
 // Book routes
 router.use("/artists", artistRoutes);
 router.use("/venue", venueRoutes);
-router.use("/images", imageRoutes);
+router.use("/image", imageRoutes);
 
 module.exports = router;

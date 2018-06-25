@@ -19,9 +19,14 @@ class Artist extends Component {
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   componentDidMount() {
     console.log("");
+
     API.getSingleArtist(this.props.match.params.id)
       .then(res => this.setState({ artist: res.data }))
       .catch(err => console.log(err));
+
+    console.log(
+      "this.match.params.id " + JSON.stringify(this.props.match.params)
+    );
   }
 
   // handleInputChange = event => {
@@ -87,6 +92,7 @@ class Artist extends Component {
               description={image.description}
               state={this.state.artist.state}
               id={this.props.match.params.id}
+              imageID={image.imageID}
             />
           ))}
         </Row>

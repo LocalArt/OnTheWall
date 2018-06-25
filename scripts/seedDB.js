@@ -29,21 +29,24 @@ const artistSeed = [
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Ffullsizeoutput_7b0.jpeg?alt=media&token=8c5768ff-b9aa-4c5c-8c68-6d11b201a651",
         imageTitle: "MY image",
         description: "What up",
-        price: "100"
+        price: "100",
+        imageID: "z222"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #1",
         description: "Michael jackson oil on large canvas",
-        price: "1800"
+        price: "1800",
+        imageID: "z223"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #2",
         description: "#2 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z224"
       }
     ],
     date: new Date(Date.now())
@@ -66,28 +69,32 @@ const artistSeed = [
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #1",
         description: "Michael jackson oil on large canvas",
-        price: "1800"
+        price: "1800",
+        imageID: "z225"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #2",
         description: "#2 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z226"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Pablo's Michael Jackson #3",
         description: "Michael jackson oil on large canvas",
-        price: "1800"
+        price: "1800",
+        imageID: "z227"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Pablo's Michael Jackson #4",
         description: "#2 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z228"
       }
     ],
     date: new Date(Date.now())
@@ -110,28 +117,31 @@ const artistSeed = [
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #1",
         description: "Michael jackson oil on large canvas",
-        price: "1800"
+        price: "1800",
+        imageID: "z229"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #2",
         description: "#2 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z212"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Van's Michael Jackson #3",
         description: "Michael jackson oil on large canvas",
-        price: "1800"
+        price: "1800",
+        imageID: "z213"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Van's Michael Jackson #4",
         description: "#2 Michael jackson oil on large canvas",
-        price: "1700"
+        imageID: "z214"
       }
     ],
     date: new Date(Date.now())
@@ -153,21 +163,24 @@ const artistSeed = [
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Ffullsizeoutput_7b0.jpeg?alt=media&token=8c5768ff-b9aa-4c5c-8c68-6d11b201a651",
         imageTitle: "MY image",
         description: "What up",
-        price: "100"
+        price: "100",
+        imageID: "z215"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #1",
         description: "Michael jackson oil on large canvas",
-        price: "1800"
+        price: "1800",
+        imageID: "z216"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #2",
         description: "#2 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z217"
       }
     ],
     date: new Date(Date.now())
@@ -189,91 +202,104 @@ const artistSeed = [
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Ffullsizeoutput_7b0.jpeg?alt=media&token=8c5768ff-b9aa-4c5c-8c68-6d11b201a651",
         imageTitle: "MY image",
         description: "What up",
-        price: "100"
+        price: "100",
+        imageID: "z218"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #1",
         description: "Michael jackson oil on large canvas",
-        price: "1800"
+        price: "1800",
+        imageID: "z219"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #2",
         description: "#2 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z241"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson in Pain #3",
         description: "#3 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z242"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson in Pain #4",
         description: "#4 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z243"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #5",
         description: "#5 Michael jackson oil on large canvas",
-        price: "1800"
+        price: "1800",
+        imageID: "z244"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson in Pain #6",
         description: "#6 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z245"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson in Pain #7",
         description: "#7 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z246"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: " Michael Jackson in Pain #8",
         description: "#8 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z247"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson #9",
         description: "#9 Michael jackson oil on large canvas",
-        price: "1800"
+        price: "1800",
+        imageID: "z248"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson in Pain #10",
         description: "#10 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z249"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: "Michael Jackson in Pain #11",
         description: "#11 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z251"
       },
       {
         url:
           "https://firebasestorage.googleapis.com/v0/b/on-the-wall-6db67.appspot.com/o/artists%2Fcategories%2Fmj.jpeg?alt=media&token=ec553132-15dc-4e30-8bbf-464878823d2d",
         imageTitle: " Michael Jackson in Pain #12",
         description: "#12 Michael jackson oil on large canvas",
-        price: "1700"
+        price: "1700",
+        imageID: "z252"
       }
     ],
     date: new Date(Date.now())

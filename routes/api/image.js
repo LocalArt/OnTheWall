@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const imageController = require("../../controllers/imageController");
+const artistController = require("../../controllers/artistController");
 
 // Matches with "/api/books"
 router
@@ -13,5 +14,11 @@ router
   .get(imageController.findById)
   .put(imageController.update)
   .delete(imageController.remove);
+
+router
+  .route("/:id/:imageID")
+  .get(artistController.findByImageID)
+  .put(artistController.update)
+  .delete(artistController.remove);
 
 module.exports = router;
