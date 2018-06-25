@@ -44,13 +44,18 @@ const App = () => (
         <Route exact path="/artist/:id" component={Artist} />
 
         <Route path="/artist/:id/contact" component={Contact} />
+        <Route path="/im/:id/contact" component={Contact} />
 
-        <Route path="/images" component={Image} />
-        <Route path="/images/:id" component={Image} />
+        <Route exact path="/image" component={Images} />
+        <Route path="/image/:id/:imageID" component={Images} />
         <Route exact path="/artistsignup" component={ArtistSignUp} />
         <Route exact path="/venuesignup" component={VenueSignUp} />
         <Route exact path="/venue" component={Venue} />
-        <Route exact path="/artistSearchResult" component={ArtistSearchResult} />
+        <Route
+          exact
+          path="/artistSearchResult"
+          component={ArtistSearchResult}
+        />
         <Route exact path="/venueSearchResult" component={VenueSearchResult} />
         {/* <Route exact path="/books/:id" component={Detail} />
         <Route component={NoMatch} /> */}

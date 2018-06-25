@@ -14,7 +14,8 @@ class Upload extends React.Component {
     artist: {},
     imageTitle: "",
     description: "",
-    price: ""
+    price: "",
+    imgageID: ""
   };
 
   uploadProgress = snapshot => {
@@ -46,7 +47,14 @@ class Upload extends React.Component {
           url: this.state.url,
           imageTitle: this.state.imageTitle,
           description: this.state.description,
-          price: this.state.price
+          price: this.state.price,
+          imageID:
+            Math.random()
+              .toString(36)
+              .substring(2, 15) +
+            Math.random()
+              .toString(36)
+              .substring(2, 15)
         }
       }
     }).catch(err => console.log(err));

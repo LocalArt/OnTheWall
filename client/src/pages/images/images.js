@@ -19,11 +19,21 @@ class Images extends Component {
   // When this component mounts, grab the book with the _id of this.props.match.params.id
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   componentDidMount() {
-    console.log("");
-    API.getSingleArtist(this.props.match.params.id)
+    API.getSingleImage(
+      this.props.match.params.id,
+      this.props.match.params.imageID
+    )
       .then(res => this.setState({ artist: res.data }))
-      .catch(err => console.log(err));
+      .catch(err => console.log("ya stil messing up"));
+    console.log("this.state.artist " + JSON.stringify(this.state.artist));
+
+    console.log(
+      "this.match.params.id " + JSON.stringify(this.props.match.params)
+    );
+
+    console.log("this.match.params.Imageid " + this.props.match.params.imageID);
   }
+
   loadArtists = () => {
     API.getArtists()
       .then(res =>

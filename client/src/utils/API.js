@@ -9,6 +9,14 @@ export default {
   getSingleArtist: function(id) {
     return axios.get("/api/artists/" + id);
   },
+
+  getSingleImage: function(id, imageID) {
+    console.log("id in getSingleImage " + id);
+    console.log("imageID in getSingleImage " + imageID);
+
+    return axios.get("/api/image/" + id + "/" + imageID);
+  },
+
   // Deletes the artist with the given id
   deleteArtist: function(id) {
     return axios.delete("/api/artists/" + id);
@@ -40,9 +48,9 @@ export default {
     return axios.get("/api/images");
   },
   // Gets the artist with the given id
-  getSingleImage: function(id) {
-    return axios.get("/api/images/" + id);
-  },
+  // getSingleImage: function(id) {
+  //   return axios.get("/api/images/" + id);
+  // },
   // Deletes the artist with the given id
   deleteImage: function(id) {
     return axios.delete("/api/images/" + id);

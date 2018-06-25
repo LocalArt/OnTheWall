@@ -15,4 +15,10 @@ router
   .put(artistController.update)
   .delete(artistController.remove);
 
+router
+  .route("/:id/:imageID")
+  .get(artistController.findByImageID)
+  .put(artistController.update)
+  .delete(artistController.remove);
+
 module.exports = router;
