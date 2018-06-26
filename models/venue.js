@@ -12,6 +12,11 @@ const venueSchema = new Schema({
   facebook: { type: String },
   phone: { type: String },
   description: String,
+  image: [
+    {
+      type: Schema.Types.Mixed
+    }
+  ],
   date: { type: Date, default: Date.now }
 });
 

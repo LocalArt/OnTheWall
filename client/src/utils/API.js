@@ -29,6 +29,10 @@ export default {
     return axios.put("/api/artists/" + id, artistData);
   },
 
+  updateVenue: function(id, venueData) {
+    return axios.put("/api/venue/" + id, venueData);
+  },
+
   getVenues: function() {
     return axios.get("/api/venue");
   },

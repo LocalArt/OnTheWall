@@ -19,12 +19,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Artist from "./pages/artist";
 import Images from "./pages/images";
 import Home from "./pages/home";
-import Venue from "./pages/venue";
+import Venues from "./pages/venue";
 import VenueSignUp from "./pages/venueSignup";
 import Contact from "./pages/contact";
 import ArtistSignUp from "./pages/artistSignup";
 import ArtistSearchResult from "./pages/artistSearchResult";
 import VenueSearchResult from "./pages/artistSearchResult";
+import VenueProfile from "./pages/venueprofile";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Hero from "./components/Hero";
@@ -50,7 +51,8 @@ const App = () => (
         <Route path="/image/:id/:imageID" component={Images} />
         <Route exact path="/artistsignup" component={ArtistSignUp} />
         <Route exact path="/venuesignup" component={VenueSignUp} />
-        <Route exact path="/venue" component={Venue} />
+        <Route exact path="/allvenues" component={Venues} />
+        <Route exact path="/venue/:id" component={VenueProfile} />
         <Route
           exact
           path="/artistSearchResult"
