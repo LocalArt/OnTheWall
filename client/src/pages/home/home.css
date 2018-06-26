@@ -1,3 +1,7 @@
+.container-fluid {
+  padding: 0px;
+}
+
 .btn-host {
   margin-top: 12px;
   margin-bottom: 12px;
