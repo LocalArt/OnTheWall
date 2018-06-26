@@ -20,16 +20,16 @@ class Home extends Component {
   render() {
     return (
       <div className="home-page">
-        <div className="row justify-content-center">
+        {/* <div className="row justify-content-center">
           <button type="button" className="btn btn-outline-primary btn-host">
             Become a host
           </button>
           <button type="button" className="btn btn-outline-primary btn-artist">
             Become an artist
           </button>
-        </div>
+        </div> */}
 
-        <Hero backgroundImage="https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9">
+        <Hero backgroundImage="http://raleighdesignlab.com/onthewall/OTW_bg.jpg">
           <h1>ON THE WALL</h1>
           <h2>Where artists and venues connect </h2>
         </Hero>

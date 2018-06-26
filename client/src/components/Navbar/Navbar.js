@@ -40,7 +40,7 @@ class Navbar extends React.Component {
       default:
         return "<< Choose Search Option";
     }
-  }
+  };
 
   render() {
     console.log(this.state.searchCategory);
@@ -65,13 +65,13 @@ class Navbar extends React.Component {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
               <a className="nav-link" href="/artistSignup">
-                Become an artist <span className="sr-only">(current)</span>
+                Artist Signup <span className="sr-only">(current)</span>
               </a>
             </li>
 
             <li className="nav-item active">
               <a className="nav-link" href="/venueSignup">
-                Become a venue <span className="sr-only">(current)</span>
+                Venue Signup <span className="sr-only">(current)</span>
               </a>
             </li>
 
@@ -90,7 +90,7 @@ class Navbar extends React.Component {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <span class="fas fa-search"></span> {this.state.searchCategory}
+                <span class="fas fa-search" /> {this.state.searchCategory}
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <div
@@ -132,7 +132,10 @@ class Navbar extends React.Component {
                   placeholder={this.renderPlaceholder()}
                   aria-label="Search"
                 />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+                <button
+                  className="btn btn-outline-success my-2 my-sm-0"
+                  type="submit"
+                >
                   <Link to={this.selectSearchResult()}>Search</Link>
                 </button>
               </form>

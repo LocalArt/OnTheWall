@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import "./venueSignup.css";
+import HeroSignup from "../../components/HeroSignup";
 
 class VenueSignUp extends Component {
   state = {
@@ -82,33 +84,53 @@ class VenueSignUp extends Component {
   render() {
     return (
       <Container fluid>
+        <HeroSignup />
+
         <Row>
-          <Col size="md-6">
-            <Jumbotron>
-              <h1>Venue Sign Up</h1>
-            </Jumbotron>
+          <Col size="sm-2" />
+          {/* about */}
+          <Col size="sm-3">
+            <h6 className="signupColHead">Get free art for your walls </h6>
+            <p className="signupCol">
+              consectetur adipiscing elit. Integer quis enim sit amet massa
+              pellentesque pretium quis in ligula. Donec vel euismod orci. Nulla
+              pharetra rhoncus est, vel egestas nisl finibus ac. Sed malesuada
+              erat non ligula commodo mollis. Aliquam tincidunt est nec mi
+              condimentum, eu convallis quam auctor. Nullam pharetra tincidunt
+              lacus ac dapibus. Nam consequat risus tellus, quis suscipit ipsum
+              euismod et. Curabitur malesuada porta ex, non bibendum risus
+              imperdiet maximus. Praesent ipsum metus, volutpat eget ullamcorper
+              quis, sollicitudin id purus.{" "}
+            </p>
+          </Col>
+          {/* form */}
+          <Col size="sm-4">
             <form>
               <Input
+                className="inputBox"
                 value={this.state.venuename}
                 onChange={this.handleInputChange}
                 name="venuename"
-                placeholder="Venue Name (required)"
+                placeholder="Venue Name *"
               />
               <Input
+                className="inputBox"
                 value={this.state.email}
                 onChange={this.handleInputChange}
                 name="email"
-                placeholder="Email (required)"
+                placeholder="Email *"
               />
 
               <Input
+                className="inputBox"
                 value={this.state.password}
                 onChange={this.handleInputChange}
                 name="password"
-                placeholder="Password (required)"
+                placeholder="Password *"
               />
 
               <TextArea
+                className="inputBox"
                 value={this.state.description}
                 onChange={this.handleInputChange}
                 name="description"
@@ -116,47 +138,53 @@ class VenueSignUp extends Component {
               />
 
               <Input
+                className="inputBox"
                 value={this.state.city}
                 onChange={this.handleInputChange}
                 name="city"
-                placeholder="City (required)"
+                placeholder="City *"
               />
 
               <Input
+                className="inputBox"
                 value={this.state.state}
                 onChange={this.handleInputChange}
                 name="state"
-                placeholder="State (required)"
+                placeholder="State *"
               />
               <Input
+                className="inputBox"
                 value={this.state.zipcode}
                 onChange={this.handleInputChange}
                 name="zipcode"
-                placeholder="Zipcode (required)"
+                placeholder="Zipcode *"
               />
               <Input
+                className="inputBox"
                 value={this.state.website}
                 onChange={this.handleInputChange}
                 name="website"
-                placeholder="Website (required)"
+                placeholder="Website *"
               />
               <Input
+                className="inputBox"
                 value={this.state.facebook}
                 onChange={this.handleInputChange}
                 name="facebook"
-                placeholder="Facebook (required)"
+                placeholder="Facebook *"
               />
               <Input
+                className="inputBox"
                 value={this.state.phone}
                 onChange={this.handleInputChange}
                 name="phone"
-                placeholder="Phone (required)"
+                placeholder="Phone *"
               />
               <FormBtn
                 disabled={!(this.state.venuename && this.state.email)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Venue
+                SUBMIT
               </FormBtn>
             </form>
           </Col>

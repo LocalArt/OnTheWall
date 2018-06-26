@@ -9,14 +9,14 @@ const ArtModalBootstrap = props => {
       show={props.show}
       animation={false}
       onHide={props.handleToggle}
-      bsSize="large"
       aria-labelledby="contained-modal-title-lg"
+      className="modalStyle"
     >
-      <Modal.Dialog>
+      <Modal.Dialog className="modalStyle">
         <Modal.Header>
           <img
             className="art-fullsize"
-            src="https://dg19s6hp6ufoh.cloudfront.net/pictures/613209425/large/PicassoBullsHead.jpeg?1491535886"
+            src="https://s-i.huffpost.com/gen/2299606/images/n-STARRY-NIGHT-628x314.jpg"
             alt="full size image"
           />
         </Modal.Header>
