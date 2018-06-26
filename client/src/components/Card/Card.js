@@ -14,7 +14,7 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card flex-card">
         <img
           className="card-img-top"
           src="https://dg19s6hp6ufoh.cloudfront.net/pictures/613209425/large/PicassoBullsHead.jpeg?1491535886"

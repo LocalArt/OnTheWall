@@ -12,6 +12,10 @@
   border-radius: 0px;
 }
 
+.flex-card {
+  flex-basis: auto;
+}
+
 .card-location {
   margin-top: -6px;
   font-size: 10px;
@@ -38,9 +42,11 @@
 
 .btn-card {
   border-radius: 0px;
-  background-color: black;
+  background-color: #fff;
   border: 0px;
   font-size: 12px;
+  padding: 8px 10px 8px 10px;
+  border: 1px solid #cfcfcf;
 }
 
 .buttonBio {
