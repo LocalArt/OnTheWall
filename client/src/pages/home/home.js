@@ -3,6 +3,7 @@ import Hero from "../../components/Hero";
 import Card from "../../components/Card";
 import Footer from "../../components/Footer";
 import API from "../../utils/API";
+import { Link } from "react-router-dom";
 import "./home.css";
 
 class Home extends Component {
@@ -22,10 +23,10 @@ class Home extends Component {
       <div className="home-page">
         {/* <div className="row justify-content-center">
           <button type="button" className="btn btn-outline-primary btn-host">
-            Become a host
+            <Link to={"/venuesignup"}> Become an Host</Link>
           </button>
           <button type="button" className="btn btn-outline-primary btn-artist">
-            Become an artist
+            <Link to={"/artistsignup"}> Become an Artist</Link>
           </button>
         </div> */}
 

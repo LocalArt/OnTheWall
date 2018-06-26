@@ -13,6 +13,20 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+  findByImageID: function(req, res) {
+    console.log(
+      "YOU ARE HERE this is req.body in findByImage " +
+        JSON.stringify(req.body, null, 2)
+    );
+    db.Artist.find({
+      image: {
+        imageID: req.params.imageID
+      }
+    })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     db.Artist.create(req.body)
       .then(dbModel => res.json(dbModel))

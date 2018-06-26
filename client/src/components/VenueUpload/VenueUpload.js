@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import * as firebase from 'firebase';
-import "./Upload.css";
+import "./VenueUpload.css";
 import { storage, database } from "../Firebase/Firebase";
 import axios from "axios";
 import { Input, TextArea, FormBtn } from "../Form";
@@ -40,8 +40,8 @@ class Upload extends React.Component {
     });
   };
 
-  addImageToArtist = event => {
-    API.updateArtist(this.props.userId, {
+  addImageToVenue = event => {
+    API.updateVenue(this.props.userId, {
       $push: {
         image: {
           url: this.state.url,
@@ -112,7 +112,7 @@ class Upload extends React.Component {
         uploadTask.snapshot.ref.getDownloadURL().then(downloadURL => {
           console.log("File available at", downloadURL);
           this.setState({ url: downloadURL });
-          this.addImageToArtist();
+          this.addImageToVenue();
         });
       }
     );
