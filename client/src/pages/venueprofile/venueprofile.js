@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import Card from "../../components/Card";
-import VenueCard from "../../components/VenueCard";
+import SingleVenueCard from "../../components/SingleVenueCard";
 import Jumbotron from "../../components/Jumbotron";
 import About from "../../components/About";
 import Hero from "../../components/Hero";
@@ -33,12 +33,13 @@ class VenueProfile extends Component {
     return (
       <Container fluid>
         <div>
-          <Hero>
-            {/* // backgroundImage={
-            //   this.state.venue.image == false
-            //     ? "https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9"
-            //     : this.state.venue.image[1].url
-            // } */}
+          <Hero
+            backgroundImage={
+              this.state.venue.image == false
+                ? "https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9"
+                : this.state.venue.image[0].url
+            }
+          >
             <h1>{this.state.venue.venuename}</h1>
             <h2>
               {this.state.venue.city}, {this.state.venue.state}
@@ -65,7 +66,7 @@ class VenueProfile extends Component {
           <div>
             {this.state.venue.image
               ? this.state.venue.image.map(image => (
-                  <VenueCard
+                  <SingleVenueCard
                     url={image.url}
                     title={image.imageTitle}
                     description={image.description}
