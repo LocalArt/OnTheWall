@@ -10,6 +10,7 @@ import Upload from "../../components/Upload";
 import API from "../../utils/API";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import "./artist.css";
 
 class Artist extends Component {
   state = {
@@ -48,21 +49,30 @@ class Artist extends Component {
         </div>
         <Upload userId={this.props.match.params.id} />
         <Row>
-          <Col size="md-10 md-offset-1">
+          <Col size="md-1" />
+
+          <Col size="md-2">
             <article>
-              <h1>Synopsis</h1>{" "}
               <About
                 name={this.state.artist.name}
                 desription={this.state.artist.biography}
               />
-              <p>{this.state.artist.biography}</p>
+              {/* <p>{this.state.artist.biography}</p> */}
             </article>
           </Col>
-        </Row>
-        <Row>
-          <Col size="md-2">
-            <Link to="/">← Back to Artist</Link>
+          <Col size="md-9">
+            {this.state.artist.image.map(image => (
+              <ArtCard
+                url={image.url}
+                title={image.imageTitle}
+                description={image.description}
+                state={this.state.artist.state}
+                id={this.props.match.params.id}
+              />
+            ))}
           </Col>
+<<<<<<< HEAD
+=======
           {this.state.artist.image.map(image => (
             <ArtCard
               url={image.url}
@@ -73,7 +83,9 @@ class Artist extends Component {
               imageID={image.imageID}
             />
           ))}
+>>>>>>> 8106980b17aeb370e66256ab60acd15681a3a796
         </Row>
+
         <Row>
           <form>
             {/* <Input

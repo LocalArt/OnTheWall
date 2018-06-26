@@ -1,8 +1,18 @@
 .art-fullsize {
-  max-width: 700px;
-  max-height: 400px;
+  max-width: 1000px;
+  max-height: 500px;
 }
 
 .artModal-width {
   width: 700px;
+}
+
+.Modal.modalStyle {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.Modal {
+  width: 1000px;
 }

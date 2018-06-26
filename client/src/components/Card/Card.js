@@ -22,15 +22,20 @@ class Card extends React.Component {
         />
 
         <div className="card-body">
-          <h5 className="card-artist">{this.props.name}</h5>
-          <p className="card-location">
+          <plaintext className="card-title-home">Bull's Head</plaintext>
+
+          <plaintext className="card-artist-home">
+            by: {this.props.name}
+          </plaintext>
+          <plaintext className="card-location">
             {this.props.city}, {this.props.state}
-          </p>
-          <p className="card-title">Bull's Head</p>
-          <button href="#" className="btn btn-primary btn-card">
+          </plaintext>
+          <button href="#" className="buttonBio">
             <Link to={"/artist/" + this.props.id}>Artist Bio</Link>
           </button>
-          <button onClick={this.handleToggle}>Modal</button>
+          <button className="buttonModal" onClick={this.handleToggle}>
+            Modal
+          </button>
           <ArtistModal
             handleToggle={this.handleToggle}
             show={this.state.show}
