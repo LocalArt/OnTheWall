@@ -37,7 +37,7 @@ class Artist extends Component {
           <Hero
             backgroundImage={
               this.state.artist.image == false
-                ? "https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9"
+                ? "http://raleighdesignlab.com/onthewall/no_image.jpg"
                 : this.state.artist.image[1].url
             }
           >
@@ -61,26 +61,21 @@ class Artist extends Component {
             </article>
           </Col>
           <Col size="md-9">
-            {this.state.artist.image.map(image => (
-              <ArtCard
-                url={image.url}
-                title={image.imageTitle}
-                description={image.description}
-                state={this.state.artist.state}
-                id={this.props.match.params.id}
-              />
-            ))}
+            <div className="flex-display">
+              {this.state.artist.image
+                .slice(0)
+                .reverse()
+                .map(image => (
+                  <ArtCard
+                    url={image.url}
+                    title={image.imageTitle}
+                    description={image.description}
+                    state={this.state.artist.state}
+                    id={this.props.match.params.id}
+                  />
+                ))}
+            </div>
           </Col>
-          {this.state.artist.image.map(image => (
-            <ArtCard
-              url={image.url}
-              title={image.imageTitle}
-              description={image.description}
-              state={this.state.artist.state}
-              id={this.props.match.params.id}
-              imageID={image.imageID}
-            />
-          ))}
         </Row>
 
         <Row>
