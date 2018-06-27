@@ -48,3 +48,31 @@
   height: 22.2vw;
   object-fit: cover;
 }
+
+.SignupBtn {
+  background: rgba(0, 0, 0, 0);
+  border: 1.5px solid #fff;
+  margin-right: 3px;
+  margin-left: 3px;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 15px 10px 15px;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #000;
+}
+
+.SignupBtn:hover {
+  background: rgba(255, 255, 255, 100);
+  color: #000;
+}
+
+.top-margin {
+  margin-top: -50px;
+}
