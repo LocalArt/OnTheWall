@@ -61,29 +61,19 @@ class Artist extends Component {
             </article>
           </Col>
           <Col size="md-9">
-            {this.state.artist.image.map(image => (
-              <ArtCard
-                url={image.url}
-                title={image.imageTitle}
-                description={image.description}
-                state={this.state.artist.state}
-                id={this.props.match.params.id}
-              />
-            ))}
+            {this.state.artist.image
+              .slice(0)
+              .reverse()
+              .map(image => (
+                <ArtCard
+                  url={image.url}
+                  title={image.imageTitle}
+                  description={image.description}
+                  state={this.state.artist.state}
+                  id={this.props.match.params.id}
+                />
+              ))}
           </Col>
-<<<<<<< HEAD
-=======
-          {this.state.artist.image.map(image => (
-            <ArtCard
-              url={image.url}
-              title={image.imageTitle}
-              description={image.description}
-              state={this.state.artist.state}
-              id={this.props.match.params.id}
-              imageID={image.imageID}
-            />
-          ))}
->>>>>>> 8106980b17aeb370e66256ab60acd15681a3a796
         </Row>
 
         <Row>

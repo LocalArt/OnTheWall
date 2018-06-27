@@ -28,25 +28,25 @@ class VenueSignUp extends Component {
   //   this.loadBooks();
   // }
 
-  loadVenues = () => {
-    API.getVenues()
-      .then(res =>
-        this.setState({
-          venues: [],
-          venuename: "",
-          email: "",
-          password: "",
-          city: "",
-          state: "",
-          zipcode: "",
-          website: "",
-          facebook: "",
-          phone: "",
-          description: ""
-        })
-      )
-      .catch(err => console.log(err));
-  };
+  // loadVenues = () => {
+  //   API.getVenues()
+  //     .then(res =>
+  //       this.setState({
+  //         venues: [],
+  //         venuename: "",
+  //         email: "",
+  //         password: "",
+  //         city: "",
+  //         state: "",
+  //         zipcode: "",
+  //         website: "",
+  //         facebook: "",
+  //         phone: "",
+  //         description: ""
+  //       })
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
   // deleteBook = id => {
   //   API.deleteBook(id)
@@ -76,7 +76,9 @@ class VenueSignUp extends Component {
         phone: this.state.phone,
         description: this.state.description
       })
-        .then(res => this.loadVenues())
+        .then(res => {
+          this.props.history.push(`/venue/${res.data._id}`);
+        })
         .catch(err => console.log(err));
     }
   };

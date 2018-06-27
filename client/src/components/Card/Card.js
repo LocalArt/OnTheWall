@@ -17,7 +17,11 @@ class Card extends React.Component {
       <div className="card">
         <img
           className="card-img-top"
-          src="https://dg19s6hp6ufoh.cloudfront.net/pictures/613209425/large/PicassoBullsHead.jpeg?1491535886"
+          src={
+            this.props.image[0] && this.props.image[0].url
+              ? this.props.image[0].url
+              : "https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9"
+          }
           alt="Card image cap"
         />
 
