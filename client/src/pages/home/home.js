@@ -47,6 +47,7 @@ class Home extends Component {
         <div className="row justify-content-center home-cards">
           {this.state.artist.map(artist => (
             <Card
+              image={artist.image}
               key={artist._id}
               id={artist._id}
               name={artist.name}
