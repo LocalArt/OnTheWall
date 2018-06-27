@@ -20,7 +20,7 @@ class Card extends React.Component {
           src={
             this.props.image[0] && this.props.image[0].url
               ? this.props.image[0].url
-              : "https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9"
+              : "http://raleighdesignlab.com/onthewall/no_image.jpg"
           }
           alt="Card image cap"
         />
