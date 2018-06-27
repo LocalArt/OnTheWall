@@ -14,7 +14,7 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card flex-card">
         <img
           className="card-img-top"
           src={

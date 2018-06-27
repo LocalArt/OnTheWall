@@ -7,6 +7,10 @@
   float: left;
 }
 
+.flex-card {
+  flex-basis: auto;
+}
+
 .card-location {
   margin-top: -6px;
   font-size: 12px;
@@ -47,4 +51,8 @@
   font-weight: bold;
   padding: 8px 10px 8px 10px;
   border: 1px solid #cfcfcf;
+}
+
+.btn-card {
+  background-color: #fff;
 }
