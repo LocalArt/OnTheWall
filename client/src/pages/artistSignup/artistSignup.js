@@ -22,32 +22,33 @@ class ArtistSignUp extends Component {
     facebook: "",
     instagram: "",
     phone: "",
-    biography: ""
+    biography: "",
+    id: ""
   };
 
   // componentDidMount() {
   //   this.loadBooks();
   // }
 
-  loadArtists = () => {
-    API.getArtists()
-      .then(res =>
-        this.setState({
-          artists: [],
-          name: "",
-          email: "",
-          password: "",
-          city: "",
-          state: "",
-          zipcode: "",
-          facebook: "",
-          instagram: "",
-          phone: "",
-          biography: ""
-        })
-      )
-      .catch(err => console.log(err));
-  };
+  // loadArtists = () => {
+  //   API.getArtists()
+  //     .then(res =>
+  //       this.setState({
+  //         artists: [],
+  //         name: "",
+  //         email: "",
+  //         password: "",
+  //         city: "",
+  //         state: "",
+  //         zipcode: "",
+  //         facebook: "",
+  //         instagram: "",
+  //         phone: "",
+  //         biography: ""
+  //       })
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
   // deleteBook = id => {
   //   API.deleteBook(id)
@@ -77,7 +78,9 @@ class ArtistSignUp extends Component {
         phone: this.state.phone,
         biography: this.state.biography
       })
-        .then(res => this.loadArtists())
+        .then(res => {
+          this.props.history.push(`/artist/${res.data._id}`);
+        })
         .catch(err => console.log(err));
     }
   };
