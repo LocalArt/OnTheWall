@@ -7,11 +7,12 @@ class ArtistSearchResult extends Component {
         artist: []
     };
     
-      componentDidMount() {
-        console.log("");
-        API.getArtists()
-          .then(res => this.setState({ artist: res.data }))
-          .catch(err => console.log(err));
+    componentDidMount() {
+      console.log("");
+
+      API.getArtistByName(this.props.match.params.name)
+        .then(res => this.setState({ artist: res.data }))
+        .catch(err => console.log(err));
     }
 
     render() {

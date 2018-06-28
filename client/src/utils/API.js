@@ -10,6 +10,10 @@ export default {
     return axios.get("/api/artists/" + id);
   },
 
+  getArtistByName: function(name) {
+    return axios.get("/api/artists/name/" + name);
+  },
+
   getSingleImage: function(id, imageID) {
     console.log("id in getSingleImage " + id);
     console.log("imageID in getSingleImage " + imageID);
@@ -39,6 +43,14 @@ export default {
   // Gets the artist with the given id
   getSingleVenue: function(id) {
     return axios.get("/api/venue/" + id);
+  },
+
+  getSingleVenueByName: function(name) {
+    return axios.get("/api/venue/name/" + name);
+  },
+
+  getVenueByCity: function(city) {
+    return axios.get("/api/venue/city/" + city);
   },
   // Deletes the artist with the given id
   deleteVenue: function(id) {

@@ -71,8 +71,6 @@ class Artist extends Component {
               />
             ))}
           </Col>
-<<<<<<< HEAD
-=======
           {this.state.artist.image.map(image => (
             <ArtCard
               url={image.url}
@@ -83,7 +81,6 @@ class Artist extends Component {
               imageID={image.imageID}
             />
           ))}
->>>>>>> 8106980b17aeb370e66256ab60acd15681a3a796
         </Row>
 
         <Row>
