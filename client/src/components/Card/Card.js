@@ -14,21 +14,34 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card flex-card">
         <img
           className="card-img-top"
-          src="https://dg19s6hp6ufoh.cloudfront.net/pictures/613209425/large/PicassoBullsHead.jpeg?1491535886"
+          src={
+            this.props.image[0] && this.props.image[0].url
+              ? this.props.image[0].url
+              : "http://raleighdesignlab.com/onthewall/no_image.jpg"
+          }
           alt="Card image cap"
         />
 
         <div className="card-body">
-          <plaintext className="card-title-home">Bull's Head</plaintext>
+          <plaintext className="card-title-home">
+            {this.props.image[0] && this.props.image[0].imageTitle
+              ? this.props.image[0].imageTitle
+              : "No Art Registerd"}
+          </plaintext>
 
           <plaintext className="card-artist-home">
             by: {this.props.name}
           </plaintext>
           <plaintext className="card-location">
             {this.props.city}, {this.props.state}
+          </plaintext>
+          <plaintext className="card-artist-home">
+            {this.props.image[0] && this.props.image[0].price
+              ? "$" + this.props.image[0].price
+              : ""}
           </plaintext>
           <button href="#" className="buttonBio">
             <Link to={"/artist/" + this.props.id}>Artist Bio</Link>

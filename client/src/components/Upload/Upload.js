@@ -113,6 +113,7 @@ class Upload extends React.Component {
           console.log("File available at", downloadURL);
           this.setState({ url: downloadURL });
           this.addImageToArtist();
+          window.location.reload();
         });
       }
     );

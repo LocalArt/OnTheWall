@@ -37,7 +37,7 @@ class Artist extends Component {
           <Hero
             backgroundImage={
               this.state.artist.image == false
-                ? "https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9"
+                ? "http://raleighdesignlab.com/onthewall/no_image.jpg"
                 : this.state.artist.image[1].url
             }
           >
@@ -45,42 +45,44 @@ class Artist extends Component {
             <h2>
               {this.state.artist.city}, {this.state.artist.state}
             </h2>
+            <button className="SignupBtn" style={{ height: "42px" }}>
+              <a className="link" href="/artistSignup">
+                Contact Artist <span className="sr-only">(current)</span>
+              </a>
+            </button>
           </Hero>
         </div>
-        <Upload userId={this.props.match.params.id} />
+        {/* <Upload userId={this.props.match.params.id} /> */}
         <Row>
-          <Col size="md-1" />
+          <Col size="lg-1" />
 
-          <Col size="md-2">
-            <article>
-              <About
-                name={this.state.artist.name}
-                desription={this.state.artist.biography}
-              />
-              {/* <p>{this.state.artist.biography}</p> */}
-            </article>
+          <Col size="lg-3">
+            <div className="bio-style">
+              <article>
+                <About
+                  name={this.state.artist.name}
+                  desription={this.state.artist.biography}
+                />
+                {/* <p>{this.state.artist.biography}</p> */}
+              </article>
+            </div>
           </Col>
-          <Col size="md-9">
-            {this.state.artist.image.map(image => (
-              <ArtCard
-                url={image.url}
-                title={image.imageTitle}
-                description={image.description}
-                state={this.state.artist.state}
-                id={this.props.match.params.id}
-              />
-            ))}
+          <Col size="lg-8">
+            <div className="flex-display">
+              {this.state.artist.image
+                .slice(0)
+                .reverse()
+                .map(image => (
+                  <ArtCard
+                    url={image.url}
+                    title={image.imageTitle}
+                    description={image.description}
+                    state={this.state.artist.state}
+                    id={this.props.match.params.id}
+                  />
+                ))}
+            </div>
           </Col>
-          {this.state.artist.image.map(image => (
-            <ArtCard
-              url={image.url}
-              title={image.imageTitle}
-              description={image.description}
-              state={this.state.artist.state}
-              id={this.props.match.params.id}
-              imageID={image.imageID}
-            />
-          ))}
         </Row>
 
         <Row>
@@ -110,7 +112,7 @@ class Artist extends Component {
               name="description"
               placeholder="Description "
             /> */}
-            <Upload />
+            {/* <Upload /> */}
             {/* <FormBtn onClick={this.handleFormSubmit}>Submit Image</FormBtn> */}
           </form>
         </Row>

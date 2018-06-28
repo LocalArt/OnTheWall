@@ -6,11 +6,12 @@ const ArtModalBootstrap = props => {
   console.log(props);
   return (
     <Modal
+      bsSize="large"
+      dialogClassName="custom-modal"
       show={props.show}
       animation={false}
       onHide={props.handleToggle}
       aria-labelledby="contained-modal-title-lg"
-      className="modalStyle"
     >
       <Modal.Dialog className="modalStyle">
         <Modal.Header>
