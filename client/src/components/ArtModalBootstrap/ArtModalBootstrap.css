@@ -1,24 +1,35 @@
 .art-fullsize {
   max-width: 1000px;
-  max-height: 500px;
+  width: 100%;
+  max-height: 600px;
+  margin: auto;
 }
 
-.artModal-width {
-  width: 700px;
-}
+/* .modal-lg,
+.modal-dialog {
+  max-width: 900px;
+  width: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin: auto;
+  border-radius: 0px;
+} */
 
-.Modal.modalStyle {
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 30px;
-}
-
-.Modal {
+/* .picture-modal {
   width: 1000px;
+} */
+
+.full-modal {
+  width: 800px;
+  margin: auto;
+  text-align: center;
 }
 
-.custom-modal {
-  display: block;
-  width: 1200px;
-  padding-left: 0px;
+.modal-footer {
+  width: 800px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.footer-btn {
+  border-radius: 0px;
 }
