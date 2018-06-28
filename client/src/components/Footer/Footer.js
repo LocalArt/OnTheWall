@@ -9,7 +9,8 @@ const divStyle = {
   position: "sticky-bottom",
   width: "100%",
   backgroundColor: "black",
-  height: "100px"
+  height: "100px",
+  marginTop: "50px"
 };
 
 const Footer = props => (

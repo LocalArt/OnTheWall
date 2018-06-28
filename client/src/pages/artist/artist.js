@@ -45,22 +45,29 @@ class Artist extends Component {
             <h2>
               {this.state.artist.city}, {this.state.artist.state}
             </h2>
+            <button className="SignupBtn" style={{ height: "42px" }}>
+              <a className="link" href="/artistSignup">
+                Contact Artist <span className="sr-only">(current)</span>
+              </a>
+            </button>
           </Hero>
         </div>
-        <Upload userId={this.props.match.params.id} />
+        {/* <Upload userId={this.props.match.params.id} /> */}
         <Row>
-          <Col size="md-1" />
+          <Col size="lg-1" />
 
-          <Col size="md-2">
-            <article>
-              <About
-                name={this.state.artist.name}
-                desription={this.state.artist.biography}
-              />
-              {/* <p>{this.state.artist.biography}</p> */}
-            </article>
+          <Col size="lg-3">
+            <div className="bio-style">
+              <article>
+                <About
+                  name={this.state.artist.name}
+                  desription={this.state.artist.biography}
+                />
+                {/* <p>{this.state.artist.biography}</p> */}
+              </article>
+            </div>
           </Col>
-          <Col size="md-9">
+          <Col size="lg-8">
             <div className="flex-display">
               {this.state.artist.image
                 .slice(0)
@@ -105,7 +112,7 @@ class Artist extends Component {
               name="description"
               placeholder="Description "
             /> */}
-            <Upload />
+            {/* <Upload /> */}
             {/* <FormBtn onClick={this.handleFormSubmit}>Submit Image</FormBtn> */}
           </form>
         </Row>
