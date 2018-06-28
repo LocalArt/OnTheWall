@@ -4,8 +4,16 @@ import "./Navbar.css";
 
 class Navbar extends React.Component {
   state = {
-    searchCategory: "By Artist"
+    searchCategory: "By Artist",
+    search: "",
+    searchBar: "",
   };
+
+  handleInputChanged = event => {
+    const {name, value} = event.target;
+
+    this.setState({[name]:value});
+  }
 
   //Depending on the current path, this component sets the "active" class on the appropriate navigation link item
   searchWhat = dropDownItem => {
@@ -30,20 +38,20 @@ class Navbar extends React.Component {
   selectSearchResult = () => {
     switch (this.state.searchCategory) {
       case "By Artist":
-        return "/artistSearchResult";
+        return "/artistSearchResult/" + this.state.searchBar;
       case "By Artist Location":
-        return "/artistSearchResult";
+        return "/artistSearchResult/" + this.state.searchBar;
       case "By Venue":
-        return "/venueSearchResult";
+        return "/venueSearchResult/" + this.state.searchBar;
       case "By Venue Location":
-        return "/venueSearchResult";
+        return "/venueSearchResult/" + this.state.searchBar;
       default:
         return "<< Choose Search Option";
     }
   };
 
   render() {
-    console.log(this.state.searchCategory);
+    console.log(this.state.searchBar);
     return (
       <nav className="navbar navbar-custom navbar-expand-lg navbar-light">
         <a className="navbar-brand" href="/">
@@ -127,15 +135,15 @@ class Navbar extends React.Component {
             <li>
               <form id="searchForm" className="form-inline my-2 my-lg-0">
                 <input
+                  value={this.state.searchBar}
+                  name="searchBar"
                   className="form-control mr-sm-2"
                   type="search"
                   placeholder={this.renderPlaceholder()}
                   aria-label="Search"
+                  onChange={this.handleInputChanged}
                 />
-                <button
-                  className="btn btn-outline-success my-2 my-sm-0"
-                  type="submit"
-                >
+                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
                   <Link to={this.selectSearchResult()}>Search</Link>
                 </button>
               </form>

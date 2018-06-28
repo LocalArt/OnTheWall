@@ -5,11 +5,8 @@ mongoose.Promise = global.Promise;
 // This file empties the Books collection and inserts the books below
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/OnTheWall",
-  {
-    useMongoClient: true
-  }
-);
+  process.env.MONGODB_URI || "mongodb://localhost:27017/OnTheWall"
+).then(() => {
 
 const artistSeed = [
   {
@@ -310,7 +307,6 @@ db.Artist.remove({})
   .then(() => db.Artist.collection.insertMany(artistSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
-    process.exit(0);
   })
   .catch(err => {
     console.error(err);
@@ -350,7 +346,6 @@ db.Venue.remove({})
   .then(() => db.Venue.collection.insertMany(venueSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
-    process.exit(0);
   })
   .catch(err => {
     console.error(err);
@@ -376,9 +371,9 @@ db.Image.remove({})
   .then(() => db.Image.collection.insertMany(imageSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
-    process.exit(0);
   })
   .catch(err => {
     console.error(err);
     process.exit(1);
   });
+})
