@@ -4,5 +4,10 @@
 }
 
 .container-fluid {
-  padding: 0px;
+  padding: 10px;
+}
+
+.bio-style {
+  padding-left: 20px;
+  padding-right: 10px;
 }
