@@ -14,4 +14,12 @@ router
   .put(venueController.update)
   .delete(venueController.remove);
 
+router  
+  .route("/name/:name")
+  .get(venueController.findByName);
+
+router  
+.route("/city/:city")
+.get(venueController.findByName);
+
 module.exports = router;

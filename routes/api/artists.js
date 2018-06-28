@@ -21,4 +21,8 @@ router
   .put(artistController.update)
   .delete(artistController.remove);
 
+router  
+.route("/name/:name")
+.get(artistController.findByName);
+
 module.exports = router;

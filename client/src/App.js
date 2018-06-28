@@ -25,7 +25,7 @@ import OurStory from "./pages/aboutproj";
 import Contact from "./pages/contact";
 import ArtistSignUp from "./pages/artistSignup";
 import ArtistSearchResult from "./pages/artistSearchResult";
-import VenueSearchResult from "./pages/artistSearchResult";
+import VenueSearchResult from "./pages/venueSearchResult";
 import VenueProfile from "./pages/venueprofile";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
@@ -55,12 +55,10 @@ const App = () => (
         <Route exact path="/venuesignup" component={VenueSignUp} />
         <Route exact path="/allvenues" component={Venues} />
         <Route exact path="/venue/:id" component={VenueProfile} />
-        <Route
-          exact
-          path="/artistSearchResult"
-          component={ArtistSearchResult}
-        />
-        <Route exact path="/venueSearchResult" component={VenueSearchResult} />
+
+        <Route exact path="/artistSearchResult/:name" component={ArtistSearchResult}/>
+        <Route exact path="/venueSearchResult/:name" component={VenueSearchResult} />
+        <Route exact path="/venueSearchResult/:city" component={VenueSearchResult} />
         {/* <Route exact path="/books/:id" component={Detail} />
         <Route component={NoMatch} /> */}
       </Switch>

@@ -3,9 +3,17 @@ import Card from "../../components/Card";
 import API from "../../utils/API";
 
 class ArtistSearchResult extends Component {
-  state = {
-    artist: []
-  };
+    state = {
+        artist: []
+    };
+    
+    componentDidMount() {
+      console.log("");
+
+      API.getArtistByName(this.props.match.params.name)
+        .then(res => this.setState({ artist: res.data }))
+        .catch(err => console.log(err));
+    }
 
   componentDidMount() {
     console.log("");
