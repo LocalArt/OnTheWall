@@ -46,9 +46,12 @@ class Artist extends Component {
               {this.state.artist.city}, {this.state.artist.state}
             </h2>
             <button className="SignupBtn" style={{ height: "42px" }}>
-              <a className="link" href="/artistSignup">
-                Contact Artist <span className="sr-only">(current)</span>
-              </a>
+              <Link
+                to={"/artist/" + this.state.artist._id + "/contact/"}
+                className="link"
+              >
+                Contact Artist
+              </Link>
             </button>
           </Hero>
         </div>
@@ -61,7 +64,7 @@ class Artist extends Component {
               <article>
                 <About
                   name={this.state.artist.name}
-                  desription={this.state.artist.biography}
+                  description={this.state.artist.biography}
                 />
                 {/* <p>{this.state.artist.biography}</p> */}
               </article>

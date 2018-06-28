@@ -39,7 +39,7 @@ class Home extends Component {
             </a>
           </button>
           <button className="SignupBtn" style={{ height: "42px" }}>
-            <a className="link" href="/artistSignup">
+            <a className="link" href="/venueSignup">
               Venue Signup <span className="sr-only">(current)</span>
             </a>
           </button>
