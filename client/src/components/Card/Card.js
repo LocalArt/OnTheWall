@@ -47,7 +47,7 @@ class Card extends React.Component {
             <Link to={"/artist/" + this.props.id}>Artist Bio</Link>
           </button>
           <button className="buttonModal" onClick={this.handleToggle}>
-            Modal
+            View
           </button>
           <ArtistModal
             handleToggle={this.handleToggle}
