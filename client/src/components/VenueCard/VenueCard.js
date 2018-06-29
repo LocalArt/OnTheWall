@@ -17,7 +17,11 @@ class VenueCard extends React.Component {
       <div className="card">
         <img
           className="card-img-top"
-          src="https://dg19s6hp6ufoh.cloudfront.net/pictures/613209425/large/PicassoBullsHead.jpeg?1491535886"
+          src={
+            this.props.image[0] && this.props.image[0].url
+              ? this.props.image[0].url
+              : "http://raleighdesignlab.com/onthewall/no_image.jpg"
+          }
           alt="Card image cap"
         />
 
