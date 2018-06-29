@@ -31,6 +31,7 @@ class VenueSearchResult extends Component {
             name={venues.venuename}
             city={venues.city}
             state={venues.state}
+            image={venues.image}
           />
         ))}
       </div>
