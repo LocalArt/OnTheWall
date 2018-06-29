@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import Card from "../../components/Card";
 import ArtCard from "../../components/ArtCard";
+import ArtistModal from "../../components/ArtModalBootstrap";
 import Jumbotron from "../../components/Jumbotron";
 import About from "../../components/About";
 import Hero from "../../components/Hero";
@@ -55,7 +56,7 @@ class Artist extends Component {
             </button>
           </Hero>
         </div>
-        <Upload userId={this.props.match.params.id} />
+        {/* <Upload userId={this.props.match.params.id} /> */}
         <Row>
           <Col size="lg-1" />
 
@@ -66,6 +67,8 @@ class Artist extends Component {
                   name={this.state.artist.name}
                   description={this.state.artist.biography}
                 />
+                <Upload userId={this.props.match.params.id} />
+                {/* <Upload userId={this.props.match.params.id} /> */}
                 {/* <p>{this.state.artist.biography}</p> */}
               </article>
             </div>
