@@ -23,7 +23,9 @@
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
     "express": "^4.15.4",
+    "express-session": "^1.15.6",
     "firebase-admin": "^5.12.1",
     "firebase-functions": "^1.0.4",
     "if-env": "^1.0.4",

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Card from "../../components/Card";
 import API from "../../utils/API";
 
-class ArtistSearchResult extends Component {
+class ArtistCitySearchResult extends Component {
     state = {
         artist: []
     };
@@ -10,7 +10,7 @@ class ArtistSearchResult extends Component {
     componentDidMount() {
       console.log("");
 
-      API.getArtistByName(this.props.match.params.name)
+      API.getArtistByCity(this.props.match.params.city)
         .then(res => this.setState({ artist: res.data }, () => console.log("State was updated in artist search", this.state.artist)))
         .catch(err => console.log(err));
     }
@@ -33,4 +33,4 @@ class ArtistSearchResult extends Component {
   }
 }
 
-export default ArtistSearchResult;
+export default ArtistCitySearchResult;

@@ -19,11 +19,11 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findByCity: function(req, res) {
-    db.Venue.find({city: {"$regex": req.params.city, "$options": "i"}})
+    db.Venue.find(req.query)
+      .where({city: req.params.city})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-
   create: function(req, res) {
     db.Venue.create(req.body)
       .then(dbModel => res.json(dbModel))
