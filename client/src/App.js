@@ -23,8 +23,11 @@ import Venues from "./pages/venue";
 import VenueSignUp from "./pages/venueSignup";
 import OurStory from "./pages/aboutproj";
 import Contact from "./pages/contact";
+import Login from "./pages/login";
 import ArtistSignUp from "./pages/artistSignup";
 import ArtistSearchResult from "./pages/artistSearchResult";
+import ArtistCitySearchResult from "./pages/artistCitySearchResult";
+import VenueCitySearchResult from "./pages/venueCitySearchResult";
 import VenueSearchResult from "./pages/venueSearchResult";
 import VenueProfile from "./pages/venueprofile";
 import Navbar from "./components/Navbar";
@@ -53,12 +56,14 @@ const App = () => (
         <Route exact path="/artistsignup" component={ArtistSignUp} />
         <Route exact path="/aboutproj" component={OurStory} />
         <Route exact path="/venuesignup" component={VenueSignUp} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/allvenues" component={Venues} />
         <Route exact path="/venue/:id" component={VenueProfile} />
 
         <Route exact path="/artistSearchResult/:name" component={ArtistSearchResult}/>
+        <Route exact path="/artistCitySearchResult/:city" component={ArtistCitySearchResult}/>
         <Route exact path="/venueSearchResult/:name" component={VenueSearchResult} />
-        <Route exact path="/venueSearchResult/:city" component={VenueSearchResult} />
+        <Route exact path="/venueCitySearchResult/:city" component={VenueCitySearchResult} />
         {/* <Route exact path="/books/:id" component={Detail} />
         <Route component={NoMatch} /> */}
       </Switch>

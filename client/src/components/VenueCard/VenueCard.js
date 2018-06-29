@@ -18,9 +18,9 @@ class VenueCard extends React.Component {
         <img
           className="card-img-top"
           src={
-            this.props.image == false
-              ? "http://raleighdesignlab.com/onthewall/no_image.jpg"
-              : this.props.image[0].url
+            this.props.image[0] && this.props.image[0].url
+              ? this.props.image[0].url
+              : "http://raleighdesignlab.com/onthewall/no_image.jpg"
           }
           alt="Card image cap"
         />

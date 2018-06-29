@@ -7,6 +7,14 @@ router
   .route("/")
   .get(artistController.findAll)
   .post(artistController.create);
+  
+router  
+.route("/name/:name")
+.get(artistController.findByName);
+
+router
+.route("/city/:city")
+.get(artistController.findByCity);
 
 // Matches with "/api/books/:id"
 router
@@ -20,9 +28,5 @@ router
   .get(artistController.findByImageID)
   .put(artistController.update)
   .delete(artistController.remove);
-
-router  
-.route("/name/:name")
-.get(artistController.findByName);
 
 module.exports = router;
