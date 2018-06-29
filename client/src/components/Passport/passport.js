@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import API from "../../utils/API";
 
 //load bcrypt
 const bCrypt = require('bcrypt-nodejs');
@@ -12,8 +13,8 @@ var LocalStrategy = require('passport-local').Strategy;
 //SESSIONS
 // used to SERIALIZE the user
 passport.serializeUser(function(user, done) {
-        done(null, user.id);
-    });
+    done(null, user.id);
+});
 
 // used to deserialize the user
 passport.deserializeUser(function(id, done) {

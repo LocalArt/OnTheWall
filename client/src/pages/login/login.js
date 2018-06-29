@@ -18,9 +18,23 @@ handleInputChange = event => {
     this.setState({
         [name]: value
     });
-    };
+ };
 
-    componentDidMount() {
+ handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.email && this.state.password) {
+      API.findByEmail({
+        email: this.state.email,
+        password: this.state.password,
+      })
+        .then(res => {
+          this.props.history.push(`/venue/${res.data._id}`);
+        })
+        .catch(err => console.log(err));
+    }
+};
+
+componentDidMount() {
     console.log("");
     API.getSingleArtist(this.props.match.params.id)
         .then(res => this.setState({ artist: res.data }))
@@ -34,19 +48,19 @@ handleInputChange = event => {
           <Col size="md-6">
             <form>
               <Input
-                value={this.state.userEmail}
+                value={this.state.email}
                 onChange={this.handleInputChange}
-                name="userEmail"
+                name="email"
                 placeholder="Email (required)"
               />
               <Input
-                value={this.state.userPassword}
+                value={this.state.password}
                 onChange={this.handleInputChange}
-                name="userPassword"
+                name="password"
                 placeholder="Password (required)"
               />
               <FormBtn
-                disabled={!(this.state.userEmail && this.state.userPassword)}
+                disabled={!(this.state.email && this.state.password)}
                 onClick={console.log("sup")}
               >
                 Login
