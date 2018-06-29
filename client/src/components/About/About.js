@@ -20,7 +20,8 @@ export default props => (
     <div>
       {/* <p>{props.description}</p> */}
       <p style={bodyStyle}>
-        Salvador Dalí was born on May 11, 1904, in Figueres, Spain. From an
+        {props.description}
+        {/* Salvador Dalí was born on May 11, 1904, in Figueres, Spain. From an
         early age Dalí was encouraged to practice his art, and he would
         eventually go on to study at an academy in Madrid. In the 1920s, he went
         to Paris and began interacting with artists such as Picasso, Magritte
@@ -29,7 +30,7 @@ export default props => (
         clocks in a landscape setting. The rise of fascist leader Francisco
         Franco in Spain led to the artist's expulsion from the Surrealist
         movement, but that didn't stop him from painting. Dalí died in Figueres
-        in 1989.
+        in 1989. */}
       </p>
     </div>
   </div>
