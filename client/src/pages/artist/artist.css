@@ -1,0 +1,13 @@
+.flex-display {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-fluid {
+  padding: 10px;
+}
+
+.bio-style {
+  padding-left: 20px;
+  padding-right: 10px;
+}

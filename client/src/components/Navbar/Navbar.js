@@ -45,7 +45,7 @@ class Navbar extends React.Component {
   render() {
     console.log(this.state.searchCategory);
     return (
-      <nav className="navbar navbar-custom navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-custom navbar-pullright navbar-expand-lg navbar-light">
         <a className="navbar-brand" href="/">
           ON THE WALL
         </a>

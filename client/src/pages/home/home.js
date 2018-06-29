@@ -33,10 +33,21 @@ class Home extends Component {
         <Hero backgroundImage="http://raleighdesignlab.com/onthewall/OTW_bg.jpg">
           <h1>ON THE WALL</h1>
           <h2>Where artists and venues connect </h2>
+          <button className="SignupBtn" style={{ height: "42px" }}>
+            <a className="link" href="/artistSignup">
+              Artist Signup <span className="sr-only">(current)</span>
+            </a>
+          </button>
+          <button className="SignupBtn" style={{ height: "42px" }}>
+            <a className="link" href="/venueSignup">
+              Venue Signup <span className="sr-only">(current)</span>
+            </a>
+          </button>
         </Hero>
         <div className="row justify-content-center home-cards">
           {this.state.artist.map(artist => (
             <Card
+              image={artist.image}
               key={artist._id}
               id={artist._id}
               name={artist.name}

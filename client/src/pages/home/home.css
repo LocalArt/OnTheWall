@@ -1,31 +1,5 @@
-.btn-host {
-  margin-top: 12px;
-  margin-bottom: 12px;
-  margin-right: 10px;
-  border-radius: 0px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #000;
-  color: #fff;
-  border: 0px;
-  font-size: 14px;
-  letter-spacing: 0.25px;
-}
-
-.btn-artist {
-  margin-top: 12px;
-  margin-bottom: 12px;
-  border-radius: 0px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #000;
-  color: #fff;
-  border: 0px;
-  font-size: 14px;
+.container-fluid {
+  padding: 0px;
 }
 
 .home-page {
@@ -43,4 +17,27 @@
   width: 100%;
   height: 22.2vw;
   object-fit: cover;
+}
+
+.SignupBtn {
+  background: rgba(0, 0, 0, 0);
+  border: 1.5px solid #fff;
+  margin-right: 3px;
+  margin-left: 3px;
+  margin-top: 12px;
+  color: #fff;
+  font-size: 13px;
+  padding-top: 8px;
+}
+
+a.link {
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.SignupBtn:hover {
+  background: rgba(0, 0, 0, 100);
 }

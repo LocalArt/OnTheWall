@@ -13,6 +13,17 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findByName: function(req, res) {
+    db.Venue.find({venuename: {"$regex": req.params.name, "$options": "i"}})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByCity: function(req, res) {
+    db.Venue.find({city: {"$regex": req.params.city, "$options": "i"}})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
   create: function(req, res) {
     db.Venue.create(req.body)
       .then(dbModel => res.json(dbModel))

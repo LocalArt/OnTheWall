@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./ArtCard.css";
 
 const ArtCard = props => (
-  <div className="card">
+  <div className="card flex-card">
     {console.log("props.id= " + JSON.stringify(props))}
     <img className="card-img-top" src={props.url} alt="Card image cap" />
     <div className="card-body">

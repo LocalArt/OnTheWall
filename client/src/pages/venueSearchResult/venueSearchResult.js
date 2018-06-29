@@ -1,34 +1,41 @@
 import React, { Component } from "react";
-import Card from "../../components/Card";
+import { Link } from "react-router-dom";
+import VenueCard from "../../components/VenueCard";
+import Hero from "../../components/Hero";
 import API from "../../utils/API";
 
 class VenueSearchResult extends Component {
-    state = {
-        venue: []
-    };
-    
-      componentDidMount() {
-        console.log("");
-        API.getVenues()
-          .then(res => this.setState({ venue: res.data }))
-          .catch(err => console.log(err));
-    }
+  state = {
+    venues: []
+  };
+  // When this component mounts, grab the book with the _id of this.props.match.params.id
+  // e.g. localhost:3000/books/599dcb67f0f16317844583fc
+  componentDidMount() {
+    console.log("");
 
-    render() {
-      return (
-        <div className="row justify-content-center home-cards">
-          {this.state.venue.map(venue => (
-            <Card
-              key={venue._id}
-              id={venue._id}
-              venuename={venue.venuename}
-              city={venue.city}
-              state={venue.state}
-            />
-          ))}
-        </div>
-      );
-    }
+    // API.getVenues()
+    //   .then(res => this.setState({ venues: res.data }))
+    //   .catch(err => console.log(err));
+    API.getSingleVenueByName(this.props.match.params.name)
+      .then(res => this.setState({ venues: res.data }, () => console.log("State was updated in venue search", this.state.venues)))
+      .catch(err => console.log(err));
   }
+
+  render() {
+    return (
+      <div className="row justify-content-center home-cards">
+        {this.state.venues.map(venues => (
+          <VenueCard
+            key={venues._id}
+            id={venues._id}
+            name={venues.venuename}
+            city={venues.city}
+            state={venues.state}
+          />
+        ))}
+      </div>
+    );
+  }
+}
   
-  export default VenueSearchResult;
+export default VenueSearchResult;
