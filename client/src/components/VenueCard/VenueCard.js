@@ -30,15 +30,15 @@ class VenueCard extends React.Component {
           <p className="card-location">
             {this.props.city}, {this.props.state}
           </p>
-          <p className="card-title">Bull's Head</p>
-          <button href="#" className="btn btn-primary btn-card">
+          {/* <p className="card-title">Bull's Head</p> */}
+          <button href="#" className="buttonBio">
             <Link to={"/venue/" + this.props.id}>Venue Bio</Link>
           </button>
-          <button onClick={this.handleToggle}>Modal</button>
-          <ArtistModal
+          {/* <button onClick={this.handleToggle}>Modal</button> */}
+          {/* <ArtistModal
             handleToggle={this.handleToggle}
             show={this.state.show}
-          />
+          /> */}
         </div>
       </div>
     );

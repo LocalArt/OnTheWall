@@ -55,7 +55,7 @@ class Artist extends Component {
             </button>
           </Hero>
         </div>
-        {/* <Upload userId={this.props.match.params.id} /> */}
+        <Upload userId={this.props.match.params.id} />
         <Row>
           <Col size="lg-1" />
 
