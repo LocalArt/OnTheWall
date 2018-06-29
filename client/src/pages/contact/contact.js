@@ -87,12 +87,11 @@ class Contact extends Component {
                 placeholder="Message (Optional)"
               />
 
-              <FormBtn
-                disabled={!(this.state.userName && this.state.userEmail)}
-                onClick={console.log("sup")}
-              >
-                Contact Artist
-              </FormBtn>
+              <button className="SignupBtn" style={{ height: "42px" }}>
+                <Link to={"/artist/" + this.state.artist._id} className="link">
+                  Contact Artist
+                </Link>
+              </button>
             </form>
           </Col>
           {/* <Col size="md-6 sm-12">
