@@ -40,18 +40,18 @@ class Navbar extends React.Component {
       case "By Artist":
         return "/artistSearchResult/" + this.state.searchBar;
       case "By Artist Location":
-        return "/artistSearchResult/" + this.state.searchBar;
+        return "/artistCitySearchResult/" + this.state.searchBar;
       case "By Venue":
         return "/venueSearchResult/" + this.state.searchBar;
       case "By Venue Location":
-        return "/venueSearchResult/" + this.state.searchBar;
+        return "/venueCitySearchResult/" + this.state.searchBar;
       default:
         return "<< Choose Search Option";
     }
   };
 
   render() {
-    console.log(this.state.searchBar);
+    console.log("Search option: " + this.selectSearchResult())
     return (
       <nav className="navbar navbar-custom navbar-expand-lg navbar-light">
         <a className="navbar-brand" href="/">

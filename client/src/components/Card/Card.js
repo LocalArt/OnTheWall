@@ -52,6 +52,9 @@ class Card extends React.Component {
           <ArtistModal
             handleToggle={this.handleToggle}
             show={this.state.show}
+            image={this.props.image}
+            id={this.props.id}
+            name={this.props.name}
           />
         </div>
       </div>
