@@ -62,7 +62,7 @@ class Navbar extends React.Component {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
+          <ul className="nav w-100 navbar-nav navbar-right d-flex justify-content-start">
             <li className="nav-item active">
               <a className="nav-link" href="/artistSignup">
                 Artist Signup <span className="sr-only">(current)</span>
@@ -80,7 +80,7 @@ class Navbar extends React.Component {
                 About us <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item dropdown pull-right navbar-right">
+            <li class="nav-item dropdown ml-auto">
               <a
                 class="nav-link navbar-right dropdown-toggle"
                 href="#"

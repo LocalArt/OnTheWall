@@ -71,19 +71,6 @@ class Artist extends Component {
               />
             ))}
           </Col>
-<<<<<<< HEAD
-=======
-          {this.state.artist.image.map(image => (
-            <ArtCard
-              url={image.url}
-              title={image.imageTitle}
-              description={image.description}
-              state={this.state.artist.state}
-              id={this.props.match.params.id}
-              imageID={image.imageID}
-            />
-          ))}
->>>>>>> 8106980b17aeb370e66256ab60acd15681a3a796
         </Row>
 
         <Row>
