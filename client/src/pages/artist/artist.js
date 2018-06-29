@@ -52,7 +52,7 @@ class Artist extends Component {
             </button>
           </Hero>
         </div>
-        {/* <Upload userId={this.props.match.params.id} /> */}
+        <Upload userId={this.props.match.params.id} />
         <Row>
           <Col size="lg-1" />
 
@@ -61,7 +61,7 @@ class Artist extends Component {
               <article>
                 <About
                   name={this.state.artist.name}
-                  desription={this.state.artist.biography}
+                  description={this.state.artist.biography}
                 />
                 {/* <p>{this.state.artist.biography}</p> */}
               </article>

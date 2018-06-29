@@ -1,8 +1,19 @@
+.modal-dialog {
+  max-width: 900px;
+  margin: 1.75rem auto;
+}
+
+.modal-dialog {
+  margin-top: 5%;
+}
+
 .art-fullsize {
-  max-width: 1000px;
   width: 100%;
-  max-height: 600px;
   margin: auto;
+}
+
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* .modal-lg,
@@ -20,14 +31,11 @@
 } */
 
 .full-modal {
-  width: 800px;
   margin: auto;
   text-align: center;
 }
 
 .modal-footer {
-  width: 800px;
-  background-color: rgba(0, 0, 0, 0);
 }
 
 .footer-btn {

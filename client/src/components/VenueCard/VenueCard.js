@@ -17,7 +17,11 @@ class VenueCard extends React.Component {
       <div className="card">
         <img
           className="card-img-top"
-          src="https://dg19s6hp6ufoh.cloudfront.net/pictures/613209425/large/PicassoBullsHead.jpeg?1491535886"
+          src={
+            this.props.image == false
+              ? "http://raleighdesignlab.com/onthewall/no_image.jpg"
+              : this.props.image[0].url
+          }
           alt="Card image cap"
         />
 
@@ -26,15 +30,15 @@ class VenueCard extends React.Component {
           <p className="card-location">
             {this.props.city}, {this.props.state}
           </p>
-          <p className="card-title">Bull's Head</p>
-          <button href="#" className="btn btn-primary btn-card">
+          {/* <p className="card-title">Bull's Head</p> */}
+          <button href="#" className="buttonBio">
             <Link to={"/venue/" + this.props.id}>Venue Bio</Link>
           </button>
-          <button onClick={this.handleToggle}>Modal</button>
-          <ArtistModal
+          {/* <button onClick={this.handleToggle}>Modal</button> */}
+          {/* <ArtistModal
             handleToggle={this.handleToggle}
             show={this.state.show}
-          />
+          /> */}
         </div>
       </div>
     );
