@@ -38,14 +38,23 @@ class Artist extends Component {
             backgroundImage={
               this.state.artist.image == false
                 ? "http://raleighdesignlab.com/onthewall/no_image.jpg"
-                : this.state.artist.image[1].url
+                : this.state.artist.image[0].url
             }
           >
             <h1>{this.state.artist.name}</h1>
             <h2>
               {this.state.artist.city}, {this.state.artist.state}
             </h2>
-            <button className="SignupBtn" style={{ height: "42px" }}>
+            <button
+              className="SignupBtn"
+              style={{
+                paddingRight: "32px",
+                paddingLeft: "32px",
+                paddingBottom: "30px",
+                paddingTop: "8px",
+                height: "36px"
+              }}
+            >
               <Link
                 to={"/artist/" + this.state.artist._id + "/contact/"}
                 className="link"
