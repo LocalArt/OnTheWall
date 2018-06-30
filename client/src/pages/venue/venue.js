@@ -27,18 +27,19 @@ class Venues extends Component {
   render() {
     return (
       <div className="home-page">
-        <div className="row justify-content-center">
-          <button type="button" className="btn btn-outline-primary btn-host">
-            <Link to={"/venuesignup"}> Become an Host</Link>
-          </button>
-          <button type="button" className="btn btn-outline-primary btn-venues">
-            <Link to={"/venuessignup"}> Become an venues</Link>
-          </button>
-        </div>
-
         <Hero backgroundImage="http://raleighdesignlab.com/onthewall/venue_header.jpg">
           <h1>ON THE WALL</h1>
-          <h2>Where Artist and Venues Connect </h2>
+          <h2>Where artists and venues connect </h2>
+          <a className="link" href="/artistSignup">
+            <button className="SignupBtn" style={{ height: "42px" }}>
+              Artist Signup <span className="sr-only">(current)</span>
+            </button>
+          </a>
+          <a className="link" href="/venueSignup">
+            <button className="SignupBtn" style={{ height: "42px" }}>
+              Venue Signup <span className="sr-only">(current)</span>
+            </button>
+          </a>
         </Hero>
         <div className="row justify-content-center home-cards">
           {this.state.venues.map(venues => (
