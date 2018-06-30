@@ -47,7 +47,6 @@ class Upload extends React.Component {
           url: this.state.url,
           imageTitle: this.state.imageTitle,
           description: this.state.description,
-          price: this.state.price,
           imageID:
             Math.random()
               .toString(36)
@@ -113,6 +112,7 @@ class Upload extends React.Component {
           console.log("File available at", downloadURL);
           this.setState({ url: downloadURL });
           this.addImageToVenue();
+          window.location.reload();
         });
       }
     );
@@ -132,12 +132,6 @@ class Upload extends React.Component {
           placeholder="Image Title"
         />
 
-        <Input
-          value={this.state.price}
-          onChange={this.handleInputChange}
-          name="price"
-          placeholder="Price "
-        />
         <Input
           value={this.state.description}
           onChange={this.handleInputChange}
