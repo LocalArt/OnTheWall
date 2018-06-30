@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ArtCard.css";
+import ArtistModal from "../ArtModalBootstrap";
+
 
 const ArtCard = props => (
   <div className="card flex-card">
@@ -10,14 +12,14 @@ const ArtCard = props => (
       <h5 className="card-title">{props.title}</h5>
       <p className="card-description">{props.description}</p>
       {/* <p className="card-title">Bull's Head</p> */}
-      <button href="#" className="buttonExpand">
-        <Link to={"/artist/" + props.id}>Expand</Link>
-      </button>
-      <button href="#" className="buttonBuy">
-        <Link to={"/artist/" + props.id + "/contact/" + props.title}>
-          Contact to Buy
-        </Link>
-      </button>
+       {/* <button className="buttonModal" onClick={this.handleToggle}>
+         Expand
+      </button> */}
+      <Link to={"/artist/" + props.id + "/contact/" + props.title}>
+         <button href="#" className="buttonBuy">
+             Contact to Buy
+          </button>
+      </Link>
     </div>
   </div>
 );
