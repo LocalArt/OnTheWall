@@ -81,10 +81,12 @@ class Artist extends Component {
                 .map(image => (
                   <ArtCard
                     url={image.url}
+                    image={image}
                     title={image.imageTitle}
                     description={image.description}
                     state={this.state.artist.state}
                     id={this.props.match.params.id}
+                    name={this.state.artist.name}
                   />
                 ))}
             </div>
