@@ -43,9 +43,9 @@ class Card extends React.Component {
               ? "$" + this.props.image[0].price
               : ""}
           </plaintext>
-          <button href="#" className="buttonBio">
-            <Link to={"/artist/" + this.props.id}>Artist Bio</Link>
-          </button>
+          <Link to={"/artist/" + this.props.id}>
+            <button href="#" className="buttonBio">Artist Bio</button>
+          </Link>
           <button className="buttonModal" onClick={this.handleToggle}>
             View
           </button>
