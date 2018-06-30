@@ -46,13 +46,22 @@ class Artist extends Component {
             <h2>
               {this.state.artist.city}, {this.state.artist.state}
             </h2>
-              <Link
+            <Link
                 to={"/artist/" + this.state.artist._id + "/contact/"}
                 className="link"
               >
-                <button className="SignupBtn" style={{ height: "42px" }}>              
-                Contact Artist
-                </button>
+            <button
+              className="SignupBtn"
+               style={{
+               paddingRight: "32px",
+               paddingLeft: "32px",
+               paddingBottom: "30px",
+               paddingTop: "8px",
+               height: "36px"
+             }}
+            >
+              Contact Artist
+              </button>
               </Link>
           </Hero>
         </div>
