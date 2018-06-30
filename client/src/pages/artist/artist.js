@@ -39,7 +39,7 @@ class Artist extends Component {
             backgroundImage={
               this.state.artist.image == false
                 ? "http://raleighdesignlab.com/onthewall/no_image.jpg"
-                : this.state.artist.image[1].url
+                : this.state.artist.image[0].url
             }
           >
             <h1>{this.state.artist.name}</h1>

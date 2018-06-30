@@ -37,9 +37,9 @@ class VenueProfile extends Component {
           <Hero
             className="venuehero"
             backgroundImage={
-              this.state.venue.image == false
-                ? "http://raleighdesignlab.com/onthewall/green_header.jpg"
-                : this.state.venue.image[0].url
+              this.state.venue.image && this.state.venue.image[0]
+                ? this.state.venue.image[0].url
+                : "http://raleighdesignlab.com/onthewall/green_header.jpg"
             }
           >
             <h1>{this.state.venue.venuename}</h1>
@@ -62,7 +62,7 @@ class VenueProfile extends Component {
             <article>
               <About
                 name={this.state.venue.venuename}
-                desription={this.state.venue.description}
+                description={this.state.venue.description}
               />
               {/* <p>{this.state.artist.biography}</p> */}
             </article>
