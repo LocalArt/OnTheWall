@@ -38,13 +38,29 @@ class Navbar extends React.Component {
   selectSearchResult = () => {
     switch (this.state.searchCategory) {
       case "By Artist":
-        return "/artistSearchResult/" + this.state.searchBar;
+        if (this.state.searchBar === "") {
+          return "/home"
+        } else {
+          return "/artistSearchResult/" + this.state.searchBar;
+        }
       case "By Artist Location":
-        return "/artistCitySearchResult/" + this.state.searchBar;
+        if (this.state.searchBar === "") {
+          return "/home"
+        } else {
+          return "/artistCitySearchResult/" + this.state.searchBar;          
+        }
       case "By Venue":
-        return "/venueSearchResult/" + this.state.searchBar;
+        if (this.state.searchBar === "") {
+          return "/allvenues"
+        } else {
+          return "/venueSearchResult/" + this.state.searchBar;
+        }
       case "By Venue Location":
-        return "/venueCitySearchResult/" + this.state.searchBar;
+        if (this.state.searchBar === "") {
+          return "/allvenues"
+        } else {
+          return "/venueCitySearchResult/" + this.state.searchBar;
+        }
       default:
         return "<< Choose Search Option";
     }
