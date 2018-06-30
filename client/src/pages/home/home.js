@@ -35,14 +35,14 @@ class Home extends Component {
           <h2>Where artists and venues connect </h2>
           <a className="link" href="/artistSignup">
             <button className="SignupBtn" style={{ height: "42px" }}>
-              Artist Signup <span className="sr-only">(current)</span>
+             Artist Signup <span className="sr-only">(current)</span>
             </button>
           </a>
           <a className="link" href="/venueSignup">
             <button className="SignupBtn" style={{ height: "42px" }}>
-              Venue Signup <span className="sr-only">(current)</span>
+               Venue Signup <span className="sr-only">(current)</span>
             </button>
-           </a>
+          </a>
         </Hero>
         <div className="row justify-content-center home-cards">
           {this.state.artist.map(artist => (

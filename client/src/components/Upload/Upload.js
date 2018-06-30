@@ -126,9 +126,10 @@ class Upload extends React.Component {
       // }
 
       <div>
-        <hr/>
+        <hr />
         <h5>Upload your Art</h5>
         <Input
+          className="inputBox"
           value={this.state.imageTitle}
           onChange={this.handleInputChange}
           name="imageTitle"
@@ -136,24 +137,32 @@ class Upload extends React.Component {
         />
 
         <Input
+          className="inputBox"
           value={this.state.price}
           onChange={this.handleInputChange}
           name="price"
           placeholder="Price "
         />
         <Input
+          className="inputBox"
           value={this.state.description}
           onChange={this.handleInputChange}
           name="description"
           placeholder="Description "
         />
         <Input
+          className="inputBox choose-button"
           type="file"
           onChange={this.fileSelectedHandler}
           ref={fileInput => (this.fileInput = fileInput)}
         />
         {/*<button onClick={() => this.fileInput.click()}>Pick File</button>*/}
-        <button onClick={this.fileUploadHandler}><i className="fas fa-upload"></i> Upload</button>
+        <button
+          className="submit-button-style"
+          onClick={this.fileUploadHandler}
+        >
+          <i className="fas fa-upload" /> Upload
+        </button>
 
         {/* <img src={this.state.url} alt="" /> */}
       </div>
