@@ -39,7 +39,7 @@ class VenueProfile extends Component {
             backgroundImage={
               this.state.venue.image && this.state.venue.image[0]
                 ? this.state.venue.image[0].url
-                : "http://raleighdesignlab.com/onthewall/green_header.jpg"
+                : "https://raleighdesignlab.com/onthewall/green_header.jpg"
             }
           >
             <h1>{this.state.venue.venuename}</h1>
