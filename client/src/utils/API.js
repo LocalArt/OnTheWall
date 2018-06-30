@@ -17,10 +17,6 @@ export default {
   getArtistByEmail: function(email) {
     return axios.get("/api/artists/email/" + email);
   },
-  
-  getArtistByCity: function(city) {
-    return axios.get("/api/artists/city/" + city);
-  },
 
   getSingleImage: function(id, imageID) {
     console.log("id in getSingleImage " + id);
