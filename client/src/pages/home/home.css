@@ -3,9 +3,10 @@
 }
 
 .home-page {
-  background-color: #f6f6f6;
   padding-bottom: 100px;
   min-height: 780px;
+  /* background-image: url("http://raleighdesignlab.com/onthewall/background.jpg"); */
+  background-color: #f6f6f6;
 }
 
 .home-cards {

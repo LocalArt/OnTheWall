@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import "./contact.css";
 
 class Contact extends Component {
   state = {
@@ -55,46 +56,75 @@ class Contact extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-6">
-            <Jumbotron
+      <div className="home-page">
+        <Container fluid>
+          <Row>
+            <Col size="md-3" />
+            <Col size="md-6">
+              {/* <Jumbotron
               name={this.state.artist.name}
               url={
                 this.state.artist.image == false
                   ? "https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9"
                   : this.state.artist.image[0].url
               }
-            />
-            <form>
-              <Input
-                value={this.state.userName}
-                onChange={this.handleInputChange}
-                name="userName"
-                placeholder="Name (required)"
-              />
-              <Input
-                value={this.state.userEmail}
-                onChange={this.handleInputChange}
-                name="userEmail"
-                placeholder="Email (required)"
-              />
+            /> */}
 
-              <TextArea
-                value={this.state.message}
-                onChange={this.handleInputChange}
-                name="message"
-                placeholder="Message (Optional)"
-              />
+              <plaintext className="contact-header">
+                {" "}
+                Contact {this.state.artist.name}{" "}
+              </plaintext>
+              <form>
+                <Input
+                  className="inputBox"
+                  style={{ paddingRight: "20px", marginLeft: "20px" }}
+                  value={this.state.userName}
+                  onChange={this.handleInputChange}
+                  name="userName"
+                  placeholder="Name *"
+                />
+                <Input
+                  className="inputBox"
+                  style={{ marginRight: "20px", marginLeft: "20px" }}
+                  value={this.state.userEmail}
+                  onChange={this.handleInputChange}
+                  name="userEmail"
+                  placeholder="Email *"
+                />
 
-              <button className="SignupBtn" style={{ height: "42px" }}>
-                <Link to={"/artist/" + this.state.artist._id} className="link">
-                  Contact Artist
-                </Link>
-              </button>
-            </form>
-          </Col>
-          {/* <Col size="md-6 sm-12">
+                <TextArea
+                  className="inputBox"
+                  style={{
+                    height: "300px",
+                    marginRight: "20px",
+                    marginLeft: "20px"
+                  }}
+                  value={this.state.message}
+                  onChange={this.handleInputChange}
+                  name="message"
+                  placeholder="Message (Optional)"
+                />
+
+                <button
+                  style={{
+                    marginLeft: "20px",
+                    textAlign: "center",
+                    height: "42px",
+                    backgroundColor: "#000",
+                    color: "#fff",
+                    padding: " 0px 20px"
+                  }}
+                >
+                  <Link
+                    to={"/artist/" + this.state.artist._id}
+                    className="link"
+                  >
+                    Contact Artist
+                  </Link>
+                </button>
+              </form>
+            </Col>
+            {/* <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
@@ -115,8 +145,9 @@ class Contact extends Component {
               <h3>No Results to Display</h3>
             )}
           </Col> */}
-        </Row>
-      </Container>
+          </Row>
+        </Container>
+      </div>
     );
   }
 }

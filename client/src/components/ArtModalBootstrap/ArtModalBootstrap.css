@@ -4,12 +4,13 @@
 }
 
 .modal-dialog {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .art-fullsize {
-  width: 100%;
+  /* width: 100%; */
   margin: auto;
+  max-height: 750px;
 }
 
 .modal-backdrop {
