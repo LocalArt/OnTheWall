@@ -64,6 +64,7 @@ class VenueProfile extends Component {
                 name={this.state.venue.venuename}
                 description={this.state.venue.description}
               />
+              <VenueUpload userId={this.props.match.params.id} />
               {/* <p>{this.state.artist.biography}</p> */}
             </article>
           </Col>

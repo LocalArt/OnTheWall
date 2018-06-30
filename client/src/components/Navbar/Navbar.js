@@ -70,7 +70,7 @@ class Navbar extends React.Component {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
+          <ul className="nav w-100 navbar-nav navbar-right d-flex justify-content-start"/*"navbar-nav mr-auto"*/>
             <li className="nav-item active">
               <a className="nav-link" href="/artistSignup">
                 Artist Signup <span className="sr-only">(current)</span>
@@ -88,7 +88,7 @@ class Navbar extends React.Component {
                 About us <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item dropdown pull-right navbar-right">
+            <li class="nav-item dropdown ml-auto"/*"nav-item dropdown pull-right navbar-right"*/>
               <a
                 class="nav-link navbar-right dropdown-toggle"
                 href="#"
@@ -135,6 +135,7 @@ class Navbar extends React.Component {
             <li>
               <form id="searchForm" className="form-inline my-2 my-lg-0">
                 <input
+                  id="inputField"
                   value={this.state.searchBar}
                   name="searchBar"
                   className="form-control mr-sm-2"
@@ -143,8 +144,8 @@ class Navbar extends React.Component {
                   aria-label="Search"
                   onChange={this.handleInputChanged}
                 />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-                  <Link to={this.selectSearchResult()}>Search</Link>
+                <button id="searchButton" className="btn my-2 my-sm-0" type="submit">
+                  <Link to={this.selectSearchResult()}><span id="searchWord">Search</span></Link>
                 </button>
               </form>
             </li>

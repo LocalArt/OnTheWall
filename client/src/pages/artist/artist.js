@@ -46,23 +46,23 @@ class Artist extends Component {
             <h2>
               {this.state.artist.city}, {this.state.artist.state}
             </h2>
-            <button
-              className="SignupBtn"
-              style={{
-                paddingRight: "32px",
-                paddingLeft: "32px",
-                paddingBottom: "30px",
-                paddingTop: "8px",
-                height: "36px"
-              }}
-            >
-              <Link
+            <Link
                 to={"/artist/" + this.state.artist._id + "/contact/"}
                 className="link"
               >
-                Contact Artist
+            <button
+              className="SignupBtn"
+               style={{
+               paddingRight: "32px",
+               paddingLeft: "32px",
+               paddingBottom: "30px",
+               paddingTop: "8px",
+               height: "36px"
+             }}
+            >
+              Contact Artist
+              </button>
               </Link>
-            </button>
           </Hero>
         </div>
         {/* <Upload userId={this.props.match.params.id} /> */}
@@ -90,10 +90,12 @@ class Artist extends Component {
                 .map(image => (
                   <ArtCard
                     url={image.url}
+                    image={image}
                     title={image.imageTitle}
                     description={image.description}
                     state={this.state.artist.state}
                     id={this.props.match.params.id}
+                    name={this.state.artist.name}
                   />
                 ))}
             </div>

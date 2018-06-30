@@ -66,7 +66,7 @@ class Contact extends Component {
               url={
                 this.state.artist.image == false
                   ? "https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/hm_e16dcdfe62d081b7_spcms.jpg?itok=MZslClZ9"
-                  : this.state.artist.image[1].url
+                  : this.state.artist.image[0].url
               }
             /> */}
 

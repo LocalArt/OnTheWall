@@ -43,6 +43,7 @@ class Venues extends Component {
         <div className="row justify-content-center home-cards">
           {this.state.venues.map(venues => (
             <VenueCard
+              image={venues.image}
               key={venues._id}
               id={venues._id}
               name={venues.venuename}
