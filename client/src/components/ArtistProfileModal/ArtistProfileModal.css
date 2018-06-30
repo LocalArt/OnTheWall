@@ -1,0 +1,43 @@
+.modal-dialog {
+  max-width: 900px;
+  margin: 1.75rem auto;
+}
+
+.modal-dialog {
+  margin-top: 5%;
+}
+
+.art-fullsize {
+  width: 100%;
+  margin: auto;
+}
+
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* .modal-lg,
+.modal-dialog {
+  max-width: 900px;
+  width: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin: auto;
+  border-radius: 0px;
+} */
+
+/* .picture-modal {
+  width: 1000px;
+} */
+
+.full-modal {
+  margin: auto;
+  text-align: center;
+}
+
+/* .modal-footer {
+} */
+
+.footer-btn {
+  border-radius: 0px;
+}
