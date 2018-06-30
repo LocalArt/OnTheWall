@@ -46,14 +46,14 @@ class Artist extends Component {
             <h2>
               {this.state.artist.city}, {this.state.artist.state}
             </h2>
-            <button className="SignupBtn" style={{ height: "42px" }}>
               <Link
                 to={"/artist/" + this.state.artist._id + "/contact/"}
                 className="link"
               >
+                <button className="SignupBtn" style={{ height: "42px" }}>              
                 Contact Artist
+                </button>
               </Link>
-            </button>
           </Hero>
         </div>
         {/* <Upload userId={this.props.match.params.id} /> */}
