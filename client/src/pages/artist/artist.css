@@ -11,3 +11,10 @@
   padding-left: 20px;
   padding-right: 10px;
 }
+
+.UploadBtn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 0 10px;
+}

@@ -25,6 +25,14 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+  findByEmail: function(req, res) {
+    db.Artist.find(req.query)
+      .where({email: req.params.email})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
   findByImageID: function(req, res) {
     console.log(
       "YOU ARE HERE this is req.body in findByImage " +
