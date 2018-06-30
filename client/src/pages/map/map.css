@@ -5,12 +5,15 @@
 
 .mapHeader {
   font-family: "Oswald";
-  font-size: 16px;
-  margin-top: 30px;
+  font-size: 28px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .mapText {
   font-size: "14px";
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 .mapImage {

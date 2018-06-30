@@ -24,6 +24,7 @@ class ArtCard extends React.Component {
         />
         <div className="card-body">
           <h5 className="card-title">{this.props.title}</h5>
+          <p className="card-price">${this.props.image.price}</p>
           <p className="card-description">{this.props.description}</p>
           {/* <p className="card-title">Bull's Head</p> */}
           {/* <button className="buttonModal" onClick={this.handleToggle}>

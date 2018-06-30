@@ -7,7 +7,7 @@ const ArtModalBootstrap = props => {
   return (
     <Modal show={props.show} animation={false} onHide={props.handleToggle}>
       <Modal.Dialog bsClass="full-modal" className="modal-style">
-        <Modal.Header>
+        <Modal.Header className="art-title">
           {props.image[0] && props.image[0].imageTitle
             ? props.image[0].imageTitle
             : "Untitled"}
