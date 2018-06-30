@@ -3,8 +3,16 @@
   margin: 1.75rem auto;
 }
 
+.art-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  margin: auto;
+}
+
 .modal-dialog {
-  margin-top: 2%;
+  margin-top: 10px;
 }
 
 .art-fullsize {

@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import "./contact.css";
+import HeroSignup from "../../components/HeroSignup";
 
 class Contact extends Component {
   state = {
@@ -58,6 +59,7 @@ class Contact extends Component {
     return (
       <div className="home-page">
         <Container fluid>
+          <HeroSignup />
           <Row>
             <Col size="md-3" />
             <Col size="md-6">
