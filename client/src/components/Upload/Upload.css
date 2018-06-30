@@ -1,0 +1,12 @@
+.submit-button-style {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  padding: 6px 16px 6px 16px;
+}
+
+.choose-button {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+}

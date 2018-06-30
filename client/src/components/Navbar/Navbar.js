@@ -6,14 +6,14 @@ class Navbar extends React.Component {
   state = {
     searchCategory: "By Artist",
     search: "",
-    searchBar: "",
+    searchBar: ""
   };
 
   handleInputChanged = event => {
-    const {name, value} = event.target;
+    const { name, value } = event.target;
 
-    this.setState({[name]:value});
-  }
+    this.setState({ [name]: value });
+  };
 
   //Depending on the current path, this component sets the "active" class on the appropriate navigation link item
   searchWhat = dropDownItem => {
@@ -67,7 +67,7 @@ class Navbar extends React.Component {
   };
 
   render() {
-    console.log("Search option: " + this.selectSearchResult())
+    console.log("Search option: " + this.selectSearchResult());
     return (
       <nav className="navbar navbar-custom navbar-expand-lg navbar-light">
         <a className="navbar-brand" href="/">
@@ -86,7 +86,9 @@ class Navbar extends React.Component {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="nav w-100 navbar-nav navbar-right d-flex justify-content-start"/*"navbar-nav mr-auto"*/>
+          <ul
+            className="nav w-100 navbar-nav navbar-right d-flex justify-content-start" /*"navbar-nav mr-auto"*/
+          >
             <li className="nav-item active">
               <a className="nav-link" href="/artistSignup">
                 Artist Signup <span className="sr-only">(current)</span>
@@ -98,13 +100,19 @@ class Navbar extends React.Component {
                 Venue Signup <span className="sr-only">(current)</span>
               </a>
             </li>
-
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/about">
                 About us <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item dropdown ml-auto"/*"nav-item dropdown pull-right navbar-right"*/>
+            <li className="nav-item active">
+              <a className="nav-link" href="/map">
+                Map View <span className="sr-only">(current)</span>
+              </a>
+            </li>
+            <li
+              class="nav-item dropdown ml-auto" /*"nav-item dropdown pull-right navbar-right"*/
+            >
               <a
                 class="nav-link navbar-right dropdown-toggle"
                 href="#"
@@ -160,8 +168,14 @@ class Navbar extends React.Component {
                   aria-label="Search"
                   onChange={this.handleInputChanged}
                 />
-                <button id="searchButton" className="btn my-2 my-sm-0" type="submit">
-                  <Link to={this.selectSearchResult()}><span id="searchWord">Search</span></Link>
+                <button
+                  id="searchButton"
+                  className="btn my-2 my-sm-0"
+                  type="submit"
+                >
+                  <Link to={this.selectSearchResult()}>
+                    <span id="searchWord">Search</span>
+                  </Link>
                 </button>
               </form>
             </li>
