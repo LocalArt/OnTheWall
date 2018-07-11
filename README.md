@@ -1,29 +1,17 @@
-# Create React Express App
+# On The Wall
 
-## About This Boilerplate
+On The Wall was created to connect artist and venues – and vice versa.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+# For Artists
+Looking for that perfect venue to show your art? Tired of paying super high commissions? Ready to get discovered?
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+No longer is the days of going door to door trying to find a restaurant or bar or coffee shop that wants to show your art. Here at On The Wall not only can you search for that perfect venue to match your style, but venues can also find you! Check you favorite venue's calendar to see their avalability and schedule your next show!
 
-## Starting the app locally
+What about sales? Anyone can buy your art right off the venue wall via your On The Wall page. Just put up our easy to print labels with QR codes customized to each of your pieces of art. Your customers can scan, buy and go home with their new favorite piece of art.
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+# For Venues
+Are your walls bare? Are you looking for the next hot artist to bring customers in? Or just want to change up the feel of your venue?
 
-```
-yarn install
-``
+You're in the perfect place to find the right artist for you. Browse local artists and check their avalability to show at your venue. The typical show length is 1-2 months, but that is up to you and the artist! Just shoot them a message if you think they are the perfect artist for your space.
 
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-yarn start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+Your customers will be able to buy the art right off the wall! They can purchase via our mobile website and you will be notified of the sale so they can take their art home with them.
