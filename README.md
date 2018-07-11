@@ -2,6 +2,8 @@
 
 On The Wall was created to connect artist and venues – and vice versa.
 
+Live Application Link: http://onthewall.herokuapp.com/
+
 ## For Artists
 Looking for that perfect venue to show your art? Tired of paying super high commissions? Ready to get discovered?
 
